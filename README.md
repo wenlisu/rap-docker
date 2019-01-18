@@ -41,9 +41,15 @@ module.exports = {
 
 
 ### TODO
-* 修改ts接口interface空格为2格 done
-* 添加ts接口interface单行注释 done
-* 添加导入后端接口json功能
-  * UI入口 done
-  * 解析json
-  * 上传接口 
+
+0.0.1
+* ~~修改ts接口interface空格为2格~~
+* ~~添加ts接口interface单行注释~~
+* ~~添加导入后端接口json功能~~
+  * ~~UI入口~~
+  * ~~解析json~~
+  * ~~SQL数据库添加JSON MODEL以来创建新表存储用户上传的JSON文件、解析JSON文件INSERT进对应数据表生成新的项目接口~~
+
+0.0.2
+* ~~增加多个文件（默认.json、dto.json、enum.json）解析~~
+  * ~~将dto、enum解析生成到默认对应的子参数列表~~
