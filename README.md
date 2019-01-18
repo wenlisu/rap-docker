@@ -53,3 +53,5 @@ module.exports = {
 0.0.2
 * ~~增加多个文件（默认.json、dto.json、enum.json）解析~~
   * ~~将dto、enum解析生成到默认对应的子参数列表~~
+  
+* 增加在线接口测试
