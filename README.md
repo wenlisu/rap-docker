@@ -39,7 +39,6 @@ module.exports = {
 
 更多请看文章[教你使用docker部署淘宝rap2服务](https://www.cnblogs.com/rynxiao/p/9080179.html)
 
-
 ### TODO
 
 0.0.1
@@ -53,5 +52,6 @@ module.exports = {
 0.0.2
 * ~~增加多个文件（默认.json、dto.json、enum.json）解析~~
   * ~~将dto、enum解析生成到默认对应的子参数列表~~
-  
-* 增加在线接口测试
+
+* 增加在线接口测试（暂不考虑）
+* 添加到vscode插件中（开发中）
