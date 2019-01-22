@@ -1,0 +1,5 @@
+node_modules
+/rap-delos/node_modules
+/rap-dolores/node_modules
+.DS_Store
+.vscode

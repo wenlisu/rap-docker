@@ -45,7 +45,7 @@
     "prop-types": "15.6.2",
     "qiniu": "^7.2.1",
     "react": "16.4.1",
-    "react-dom": "16.4.1",
+    "react-dom": "16.4.2",
     "react-icons": "2.2.7",
     "react-markdown": "^4.0.4",
     "react-modal": "3.4.5",
