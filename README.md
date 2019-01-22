@@ -4,7 +4,7 @@ docker部署淘宝rap2服务
 ## 后端部署
 
 ```cmd
-> cd rap2-delos
+> cd rap-delos
 > docker-compose up -d
 > docker exec -it rap2-delos sh
 > node scripts/init
@@ -31,7 +31,7 @@ module.exports = {
 启动服务
 
 ```cmd
-> cd rap2-dolores
+> cd rap-dolores
 重新打包
 > docker build -t rap2-dolores .
 > docker-compose up -d
