@@ -1,0 +1,41 @@
+.OrganizationListWrapper {
+  padding: 2rem; }
+  .OrganizationListWrapper > .header {
+    margin-bottom: 2rem; }
+    .OrganizationListWrapper > .header .title {
+      font-size: 2rem; }
+  .OrganizationListWrapper > .toolbar {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8; }
+    .OrganizationListWrapper > .toolbar select.OrganizationsTypeDropdown {
+      margin-right: .5rem;
+      font-size: 1.4rem; }
+    .OrganizationListWrapper > .toolbar button.OrganizationCreateButton {
+      padding: .4rem 1rem;
+      font-size: 1.4rem; }
+    .OrganizationListWrapper > .toolbar .form-control {
+      margin-bottom: 0; }
+  .OrganizationListWrapper .OrganizationList .Organization.card {
+    margin-bottom: 1rem; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .header .title {
+      margin-bottom: .5rem;
+      font-size: 1.4rem; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .header .toolbar {
+      float: right;
+      display: none;
+      margin-left: 1rem; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .body .desc {
+      margin-bottom: .5rem;
+      color: #666; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .body .members .avatar {
+      margin-right: .2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .body .members .avatar.owner {
+      margin-right: 1rem; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block > .body .members .popover {
+      white-space: nowrap; }
+    .OrganizationListWrapper .OrganizationList .Organization.card .card-block:hover > .header .toolbar {
+      display: inline-block; }

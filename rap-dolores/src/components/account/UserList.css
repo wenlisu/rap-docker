@@ -1,0 +1,8 @@
+.UserList {
+  padding: 2rem; }
+  .UserList .header {
+    margin-bottom: 2rem; }
+    .UserList .header .title {
+      font-size: 2rem; }
+  .UserList .toolbar {
+    margin-bottom: 1rem; }

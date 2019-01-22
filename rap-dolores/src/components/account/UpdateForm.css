@@ -1,0 +1,7 @@
+.UpdateForm {
+  width: 30rem;
+  margin: 0 auto; }
+  .UpdateForm .header {
+    margin-bottom: 3rem; }
+    .UpdateForm .header .title {
+      font-size: 2rem; }

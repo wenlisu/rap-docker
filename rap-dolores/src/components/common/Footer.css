@@ -1,0 +1,12 @@
+.Footer {
+  margin-top: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 1px solid #d1d5da;
+  text-align: center; }
+  .Footer ul.friend_links {
+    margin-top: .5rem;
+    list-style: none;
+    padding: 0; }
+    .Footer ul.friend_links li {
+      display: inline-block;
+      margin-right: 1rem; }

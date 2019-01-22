@@ -1,0 +1,19 @@
+.LoginForm {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 25rem;
+  margin-left: -12.5rem;
+  margin-top: -135px;
+  border: 1px solid #E6E6E6;
+  border-radius: .5rem; }
+  .LoginForm .header {
+    padding: 1.5rem 3rem;
+    border-bottom: 1px solid #d1d5da; }
+    .LoginForm .header .title {
+      font-size: 2rem; }
+  .LoginForm .body {
+    padding: 1.5rem 3rem; }
+  .LoginForm .footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid #d1d5da; }

@@ -1,0 +1,80 @@
+.form-control {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 6px 9px;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 12px;
+  background-color: white; }
+  .form-control:focus {
+    border-color: #4A7BF7;
+    outline: 0; }
+
+input.form-control,
+select.form-control {
+  height: 32px; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 3px; }
+
+.form-horizontal label.control-label {
+  padding-top: 7px;
+  padding-right: 0; }
+
+.form-horizontal label.radio-inline {
+  padding-top: 7px;
+  padding-right: 0;
+  margin: 0 15px 10px 0; }
+  .form-horizontal label.radio-inline input[type=radio] {
+    margin-right: 10px; }
+
+@media (max-width: 575px) {
+  .form-horizontal label.control-label {
+    text-align: left; } }
+
+@media (min-width: 576px) {
+  .form-horizontal label.control-label {
+    text-align: right; } }
+
+.btn {
+  line-height: 1.5; }
+  .btn .rapfont {
+    line-height: 1rem;
+    margin-right: .5rem; }
+
+a.btn.btn-success {
+  color: white; }
+
+table.table > thead > tr th {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+table.table > tbody > tr > td {
+  vertical-align: middle; }
+  table.table > tbody > tr > td .operation {
+    visibility: hidden; }
+
+table.table > tbody > tr:hover > td .operation {
+  visibility: visible; }
+
+.OpeningScreenAdvertising {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20rem;
+  height: 4rem;
+  margin-left: -10rem;
+  margin-top: -2rem; }
+  .OpeningScreenAdvertising .Spin {
+    margin: 0;
+    padding: 0; }
+
+.card-block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem; }

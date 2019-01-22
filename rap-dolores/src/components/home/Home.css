@@ -1,0 +1,47 @@
+.Home {
+  padding: 2rem; }
+  .Home .Maiden {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .Home .Maiden .btn {
+      font-size: 1.6rem; }
+  .Home .card {
+    margin-bottom: 2rem;
+    border: 1px solid #d1d5da;
+    border-radius: .5rem;
+    overflow: hidden; }
+    .Home .card .card-header {
+      border-bottom: 1px solid #d1d5da;
+      font-size: 1.6rem; }
+    .Home .card .card-block > p:last-child {
+      margin-bottom: 0; }
+    .Home .card a:hover {
+      border-bottom: 1px solid #4A7BF7; }
+  .Home .card.Logs .Log {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eff3f6; }
+    .Home .card.Logs .Log .Log-body {
+      float: left; }
+      .Home .card.Logs .Log .Log-body .Log-avatar {
+        margin-right: .75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%; }
+      .Home .card.Logs .Log .Log-body .Log-user-link {
+        margin-right: .5rem; }
+      .Home .card.Logs .Log .Log-body .Log-type {
+        margin-right: .5rem; }
+      .Home .card.Logs .Log .Log-body .Log-target {
+        margin-right: .5rem; }
+        .Home .card.Logs .Log .Log-body .Log-target .slash {
+          color: #999; }
+    .Home .card.Logs .Log .Log-footer {
+      float: right;
+      margin-left: .5rem;
+      padding: .4rem 0; }
+      .Home .card.Logs .Log .Log-footer .Log-fromnow {
+        color: #666; }
+  .Home .card.Logs .Log:last-child {
+    border-bottom: 0; }

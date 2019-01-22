@@ -1,0 +1,36 @@
+.RuleEditor .type {
+  flex-basis: 10rem; }
+
+.RuleEditor .rule-wrapper {
+  flex-basis: 10rem;
+  padding-right: 1rem; }
+
+.RuleEditor .range-wrapper {
+  padding-right: 1rem; }
+
+.RuleEditor .drange-wrapper {
+  padding-right: 1rem; }
+
+.RuleEditor .value-wrapper {
+  flex-basis: 15rem; }
+
+.RuleEditor select {
+  width: 10rem; }
+
+.RuleEditor input.value,
+.RuleEditor input.count,
+.RuleEditor input.min,
+.RuleEditor input.max,
+.RuleEditor input.dcount,
+.RuleEditor input.dmin,
+.RuleEditor input.dmax {
+  padding: .5rem .75rem;
+  border: 1px solid #d1d5da;
+  border-radius: .4rem;
+  box-shadow: none;
+  outline: none;
+  width: 4rem;
+  text-align: center; }
+
+.RuleEditor input.value {
+  width: 8rem; }

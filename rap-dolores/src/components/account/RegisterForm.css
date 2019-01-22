@@ -1,0 +1,7 @@
+.RegisterForm {
+  width: 30rem;
+  margin: 0 auto; }
+  .RegisterForm .header {
+    margin-bottom: 3rem; }
+    .RegisterForm .header .title {
+      font-size: 2rem; }

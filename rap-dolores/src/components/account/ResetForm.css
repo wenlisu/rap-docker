@@ -1,0 +1,19 @@
+.ResetForm {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 25rem;
+  margin-left: -12.5rem;
+  margin-top: -135px;
+  border: 1px solid #E6E6E6;
+  border-radius: .5rem; }
+  .ResetForm .header {
+    padding: 1.5rem 3rem;
+    border-bottom: 1px solid #d1d5da; }
+    .ResetForm .header .title {
+      font-size: 2rem; }
+  .ResetForm .body {
+    padding: 1.5rem 3rem; }
+  .ResetForm .footer {
+    padding: 1.5rem 3rem;
+    border-top: 1px solid #d1d5da; }

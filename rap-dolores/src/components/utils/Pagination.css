@@ -1,0 +1,26 @@
+.Pagination .summary {
+  float: left;
+  padding: 0.5rem 0; }
+
+.Pagination .page-list {
+  float: right;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+  .Pagination .page-list .page-item, .Pagination .page-list .page-item-disabled, .Pagination .page-list .page-item-active {
+    margin: 0 .2rem; }
+    .Pagination .page-list .page-item .page-link, .Pagination .page-list .page-item-disabled .page-link, .Pagination .page-list .page-item-active .page-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem; }
+      .Pagination .page-list .page-item .page-link:hover, .Pagination .page-list .page-item-disabled .page-link:hover, .Pagination .page-list .page-item-active .page-link:hover {
+        color: white;
+        background-color: #4471E3; }
+  .Pagination .page-list .page-item-disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+    cursor: not-allowed; }
+  .Pagination .page-list .page-item-active .page-link {
+    color: white;
+    background-color: #4A7BF7; }

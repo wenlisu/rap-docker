@@ -1,0 +1,464 @@
+.RepositoryEditor > .header {
+  position: relative;
+  padding: 2rem;
+  background-color: #fafbfc; }
+  .RepositoryEditor > .header > .title {
+    font-size: 2rem;
+    margin-right: 1rem; }
+    .RepositoryEditor > .header > .title .slash {
+      color: #999; }
+  .RepositoryEditor > .header > .toolbar {
+    display: inline-block; }
+    .RepositoryEditor > .header > .toolbar a, .RepositoryEditor > .header > .toolbar .fake-link {
+      margin-right: 1rem; }
+  .RepositoryEditor > .header > .desc {
+    margin-top: .5rem;
+    color: #666; }
+
+.RepositorySearcher.dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  left: auto; }
+  .RepositorySearcher.dropdown > .dropdown-input {
+    margin-bottom: 0;
+    width: 20rem; }
+  .RepositorySearcher.dropdown > .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    display: block;
+    min-width: 100%;
+    max-height: 50rem;
+    overflow: scroll; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-module {
+      padding-left: 1.5rem;
+      color: #333; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-interface {
+      padding-left: 4rem;
+      color: #333; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-property {
+      padding-left: 6.5rem;
+      color: #666; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .label {
+      margin-right: .5rem;
+      color: #666; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .dropdown-item-clip {
+      margin-right: .5rem; }
+      .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .dropdown-item-clip .highlight {
+        font-weight: bold;
+        color: #4A7BF7; }
+    .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active {
+      color: #FFF; }
+      .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active > .label {
+        color: #FFF; }
+      .RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active > .dropdown-item-clip .highlight {
+        color: #FFF; }
+
+.DuplicatedInterfacesWarning {
+  margin-top: 1rem; }
+  .DuplicatedInterfacesWarning .alert.alert-warning {
+    margin-bottom: .5rem; }
+    .DuplicatedInterfacesWarning .alert.alert-warning .title {
+      margin-right: 1rem; }
+      .DuplicatedInterfacesWarning .alert.alert-warning .title .icon {
+        font-size: 1.4rem;
+        margin-right: .5rem; }
+      .DuplicatedInterfacesWarning .alert.alert-warning .title .msg {
+        font-weight: bold;
+        margin-right: 1rem; }
+    .DuplicatedInterfacesWarning .alert.alert-warning a {
+      margin-right: 1rem; }
+
+.ModuleList {
+  margin: 0 0 1.5rem 0;
+  padding: 0 2rem;
+  list-style: none;
+  border-bottom: 1px solid #e1e4e8;
+  background-color: #fafbfc;
+  margin-bottom: 0; }
+  .ModuleList > li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: -1px;
+    padding: .8rem 1.2rem;
+    border: 1px solid transparent;
+    border-width: 3px 1px 0px 1px;
+    border-radius: .4rem .4rem 0 0; }
+    .ModuleList > li.active {
+      border-bottom-color: transparent;
+      background-color: white;
+      cursor: default;
+      border-color: #e36209 #e1e4e8 transparent #e1e4e8; }
+    .ModuleList > li.active:hover {
+      background-color: white; }
+    .ModuleList > li > .Module {
+      position: relative; }
+      .ModuleList > li > .Module a.name {
+        color: #586069; }
+      .ModuleList > li > .Module .toolbar {
+        display: inline-block; }
+        .ModuleList > li > .Module .toolbar a, .ModuleList > li > .Module .toolbar .fake-link {
+          margin-left: 0.5rem;
+          font-size: 1.4rem;
+          color: #999; }
+          .ModuleList > li > .Module .toolbar a:hover, .ModuleList > li > .Module .toolbar .fake-link:hover {
+            color: #4A7BF7; }
+  .ModuleList > li:hover > .Module .toolbar {
+    display: inline-block; }
+  .ModuleList > li.active > .Module a.name {
+    color: #333; }
+  .ModuleList > li.active > .Module .toolbar {
+    display: inline-block; }
+
+.InterfaceWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem; }
+  .InterfaceWrapper .InterfaceList {
+    flex-basis: 16rem;
+    flex-shrink: 0; }
+  .InterfaceWrapper .InterfaceEditor {
+    flex-grow: 1; }
+
+.TypeList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  padding: 0;
+  min-width: 150px; }
+  .TypeList > li {
+    padding: .8rem 1.2rem; }
+    .TypeList > li.active {
+      border-color: transparent transparent #e1e4e8 #e36209; }
+    .TypeList > li > .Module {
+      overflow: hidden; }
+      .TypeList > li > .Module > a {
+        float: left;
+        line-height: 21px; }
+      .TypeList > li > .Module > div {
+        float: right; }
+
+.InterfaceList ul.body {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d1d5da;
+  border-radius: .4rem;
+  list-style: none; }
+  .InterfaceList ul.body > li {
+    position: relative;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #d1d5da; }
+    .InterfaceList ul.body > li:last-child {
+      border-bottom: 0; }
+    .InterfaceList ul.body > li .Interface {
+      position: relative;
+      padding-right: 4rem; }
+      .InterfaceList ul.body > li .Interface .name {
+        position: relative;
+        float: left;
+        max-width: 30rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .InterfaceList ul.body > li .Interface .toolbar {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.4rem; }
+        .InterfaceList ul.body > li .Interface .toolbar a, .InterfaceList ul.body > li .Interface .toolbar .fake-link {
+          margin-left: 0.5rem;
+          color: #999; }
+          .InterfaceList ul.body > li .Interface .toolbar a:hover, .InterfaceList ul.body > li .Interface .toolbar .fake-link:hover {
+            color: #4A7BF7; }
+      .InterfaceList ul.body > li .Interface .locked {
+        font-size: 1.4rem;
+        color: #FFB400; }
+  .InterfaceList ul.body > li:hover .toolbar {
+    display: block; }
+  .InterfaceList ul.body > li.active .Interface .name a {
+    color: #333; }
+    .InterfaceList ul.body > li.active .Interface .name a:hover {
+      color: #333; }
+  .InterfaceList ul.body > li.active .Interface .toolbar {
+    display: block; }
+  .InterfaceList ul.body > li.active::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    content: "";
+    background-color: #e36209; }
+
+.InterfaceList .footer {
+  padding: 0.75rem 1rem; }
+
+.InterfaceEditor {
+  margin-left: 2rem;
+  position: relative; }
+  .InterfaceEditor .InterfaceEditorToolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center; }
+    .InterfaceEditor .InterfaceEditorToolbar .btn.edit, .InterfaceEditor .InterfaceEditorToolbar .btn.save, .InterfaceEditor .InterfaceEditorToolbar .btn.cancel, .InterfaceEditor .InterfaceEditorToolbar .locker-success, .InterfaceEditor .InterfaceEditorToolbar .locker-warning, .InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+      display: block;
+      margin-bottom: 0.5rem;
+      width: 12rem; }
+    .InterfaceEditor .InterfaceEditorToolbar .locker-success, .InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.4rem;
+      color: white;
+      background-color: #6CB12A; }
+    .InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+      background-color: #FFB400; }
+
+.InterfaceSummary {
+  margin-bottom: 2rem;
+  padding-right: 13rem; }
+  .InterfaceSummary > .header {
+    margin-bottom: .5rem; }
+    .InterfaceSummary > .header > .title {
+      font-size: 1.6rem;
+      margin-right: 1rem; }
+      .InterfaceSummary > .header > .title .slash {
+        color: #999; }
+    .InterfaceSummary > .header a.edit, .InterfaceSummary > .header a.delete {
+      margin-right: .5rem; }
+  .InterfaceSummary ul.body {
+    color: #666;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .InterfaceSummary ul.body > li {
+      margin-bottom: .2rem; }
+      .InterfaceSummary ul.body > li .label {
+        color: #666;
+        margin-right: .3rem; }
+
+.PropertyList {
+  margin-bottom: 3rem; }
+  .PropertyList > .header {
+    margin-bottom: 1rem; }
+    .PropertyList > .header > .title {
+      font-size: 1.6rem;
+      margin-right: 1rem; }
+    .PropertyList > .header > .toolbar {
+      float: right; }
+      .PropertyList > .header > .toolbar .preview {
+        margin: 0; }
+        .PropertyList > .header > .toolbar .preview input {
+          margin-right: .5rem; }
+  .PropertyList > .body {
+    margin-bottom: 1rem; }
+  .PropertyList > .footer > .Previewer {
+    margin-top: 1rem; }
+    .PropertyList > .footer > .Previewer > .result-template > .header,
+    .PropertyList > .footer > .Previewer > .result-mocked > .header {
+      margin-bottom: .5rem; }
+      .PropertyList > .footer > .Previewer > .result-template > .header .title,
+      .PropertyList > .footer > .Previewer > .result-mocked > .header .title {
+        margin-right: .75rem; }
+    .PropertyList > .footer > .Previewer > .result-valid {
+      padding-top: 2.5rem;
+      text-align: center;
+      color: #999; }
+
+.SortableTreeTable .flex-row {
+  display: flex; }
+  .SortableTreeTable .flex-row .thtd, .SortableTreeTable .flex-row .th, .SortableTreeTable .flex-row .td {
+    border: 1px solid #eceeef;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: -1px; }
+  .SortableTreeTable .flex-row .th {
+    padding: .75rem;
+    font-weight: bold; }
+  .SortableTreeTable .flex-row .td {
+    padding: .5rem .75rem;
+    margin-bottom: -1px; }
+  .SortableTreeTable .flex-row .th.operations, .SortableTreeTable .flex-row .td.operations {
+    width: 4.5rem;
+    min-width: 4.5rem; }
+  .SortableTreeTable .flex-row .th.name, .SortableTreeTable .flex-row .td.name {
+    width: 20rem;
+    flex-grow: 3; }
+  .SortableTreeTable .flex-row .th.type, .SortableTreeTable .flex-row .td.type {
+    width: 7rem; }
+  .SortableTreeTable .flex-row .th.rule, .SortableTreeTable .flex-row .td.rule {
+    width: 10rem; }
+  .SortableTreeTable .flex-row .th.value, .SortableTreeTable .flex-row .td.value {
+    width: 10rem; }
+  .SortableTreeTable .flex-row .th.desc, .SortableTreeTable .flex-row .td.desc {
+    width: 15rem; }
+  .SortableTreeTable .flex-row .th .helper {
+    margin-left: .5rem;
+    color: #999; }
+    .SortableTreeTable .flex-row .th .helper:hover {
+      color: #4A7BF7; }
+  .SortableTreeTable .flex-row .td.operations {
+    padding: .5rem .75rem;
+    height: auto;
+    line-height: 1;
+    justify-content: flex-end; }
+    .SortableTreeTable .flex-row .td.operations a {
+      color: #999;
+      margin-right: .5rem; }
+      .SortableTreeTable .flex-row .td.operations a:last-child {
+        margin-right: 0; }
+      .SortableTreeTable .flex-row .td.operations a:hover {
+        color: #4A7BF7; }
+  .SortableTreeTable .flex-row .td.payload {
+    padding: .5rem .75rem;
+    height: auto;
+    line-height: 1.5; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-0 {
+    padding-left: 0.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-1 {
+    padding-left: 1.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-2 {
+    padding-left: 2.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-3 {
+    padding-left: 3.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-4 {
+    padding-left: 4.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-5 {
+    padding-left: 5.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-6 {
+    padding-left: 6.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-7 {
+    padding-left: 7.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-8 {
+    padding-left: 8.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-9 {
+    padding-left: 9.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-10 {
+    padding-left: 10.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-11 {
+    padding-left: 11.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-12 {
+    padding-left: 12.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-13 {
+    padding-left: 13.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-14 {
+    padding-left: 14.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-15 {
+    padding-left: 15.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-16 {
+    padding-left: 16.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-17 {
+    padding-left: 17.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-18 {
+    padding-left: 18.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-19 {
+    padding-left: 19.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-20 {
+    padding-left: 20.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-21 {
+    padding-left: 21.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-22 {
+    padding-left: 22.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-23 {
+    padding-left: 23.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-24 {
+    padding-left: 24.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-25 {
+    padding-left: 25.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-26 {
+    padding-left: 26.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-27 {
+    padding-left: 27.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-28 {
+    padding-left: 28.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-29 {
+    padding-left: 29.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-30 {
+    padding-left: 30.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-31 {
+    padding-left: 31.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-32 {
+    padding-left: 32.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-33 {
+    padding-left: 33.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-34 {
+    padding-left: 34.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-35 {
+    padding-left: 35.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-36 {
+    padding-left: 36.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-37 {
+    padding-left: 37.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-38 {
+    padding-left: 38.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-39 {
+    padding-left: 39.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-40 {
+    padding-left: 40.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-41 {
+    padding-left: 41.75rem; }
+  .SortableTreeTable .flex-row .td.payload.name.depth-42 {
+    padding-left: 42.75rem; }
+  .SortableTreeTable .flex-row .td.payload.value {
+    word-break: break-word; }
+
+.SortableTreeTable.editable .flex-row .td.payload {
+  padding: 0; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-0 {
+  padding-left: 0rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-1 {
+  padding-left: 1rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-2 {
+  padding-left: 2rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-3 {
+  padding-left: 3rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-4 {
+  padding-left: 4rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-5 {
+  padding-left: 5rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-6 {
+  padding-left: 6rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-7 {
+  padding-left: 7rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-8 {
+  padding-left: 8rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-9 {
+  padding-left: 9rem; }
+
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-10 {
+  padding-left: 10rem; }
+
+.SortableTreeTable.editable input.editable,
+.SortableTreeTable.editable select.editable,
+.SortableTreeTable.editable textarea.editable {
+  margin: 0;
+  padding: .5rem .75rem;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  line-height: 1.5;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent; }
+
+.Importer .CodeMirror {
+  height: 30rem; }
+
+.Importer textarea.result {
+  font-family: Menlo, Monaco, 'Courier New', monospace; }

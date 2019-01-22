@@ -1,0 +1,65 @@
+.RepositoryListWrapper {
+  padding: 2rem; }
+  .RepositoryListWrapper > .header {
+    margin-bottom: 1rem; }
+    .RepositoryListWrapper > .header .title {
+      font-size: 2rem; }
+  .RepositoryListWrapper > .toolbar {
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #e1e4e8; }
+    .RepositoryListWrapper > .toolbar select.RepositoriesTypeDropdown {
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+      font-size: 1.4rem; }
+    .RepositoryListWrapper > .toolbar button.RepositoryCreateButton {
+      padding: .4rem 1rem;
+      font-size: 1.4rem; }
+    .RepositoryListWrapper > .toolbar .form-control {
+      margin-bottom: .5rem; }
+  .RepositoryListWrapper > .body {
+    margin-bottom: 2rem; }
+
+.RepositoryList .Repository.card {
+  margin-bottom: 1rem; }
+  .RepositoryList .Repository.card .card-block {
+    position: relative; }
+    .RepositoryList .Repository.card .card-block .name {
+      font-size: 1.4rem;
+      white-space: nowrap;
+      overflow: hidden; }
+    .RepositoryList .Repository.card .card-block .desc {
+      margin-top: 1rem;
+      height: 6rem;
+      overflow: hidden;
+      color: #666; }
+    .RepositoryList .Repository.card .card-block .members {
+      display: none;
+      height: 2.5rem; }
+      .RepositoryList .Repository.card .card-block .members .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%; }
+    .RepositoryList .Repository.card .card-block .toolbar {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.25rem;
+      background-color: white; }
+      .RepositoryList .Repository.card .card-block .toolbar > a, .RepositoryList .Repository.card .card-block .toolbar > .fake-link {
+        margin: 0 0 0 0.5rem;
+        font-size: 1.4rem;
+        color: #999; }
+        .RepositoryList .Repository.card .card-block .toolbar > a:hover, .RepositoryList .Repository.card .card-block .toolbar > .fake-link:hover {
+          color: #4A7BF7; }
+  .RepositoryList .Repository.card .card-block.card-footer {
+    padding-top: 0;
+    background-color: white;
+    border-top: none;
+    color: #666; }
+    .RepositoryList .Repository.card .card-block.card-footer .ownername {
+      float: left; }
+    .RepositoryList .Repository.card .card-block.card-footer .fromnow {
+      float: right; }
+
+.RepositoryList .Repository.card:hover .card-block .toolbar {
+  display: block; }

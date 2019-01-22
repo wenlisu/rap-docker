@@ -1,0 +1,40 @@
+.Header {
+  background-color: #24292e;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  vertical-align: middle;
+  padding: 0 2rem; }
+  .Header ul.nav-links {
+    float: left; }
+  .Header ul.nav-actions {
+    float: right; }
+  .Header ul.nav-links,
+  .Header ul.nav-actions {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .Header ul.nav-links > li,
+    .Header ul.nav-actions > li {
+      float: left;
+      padding: 0 1rem; }
+      .Header ul.nav-links > li > a,
+      .Header ul.nav-actions > li > a {
+        color: white;
+        opacity: 0.5; }
+        .Header ul.nav-links > li > a:hover, .Header ul.nav-links > li > a.selected,
+        .Header ul.nav-actions > li > a:hover,
+        .Header ul.nav-actions > li > a.selected {
+          border: none;
+          font-weight: bold;
+          opacity: 1; }
+      .Header ul.nav-links > li > a.logo,
+      .Header ul.nav-actions > li > a.logo {
+        opacity: 1;
+        font-weight: bold; }
+  .Header .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%; }
+  .Header .name {
+    margin-left: .5rem; }

@@ -1,0 +1,7 @@
+.ImportRepositoryForm .rmodal-body {
+  width: 800px; }
+
+.form-group .col-sm-10 > span {
+  display: flex; }
+  .form-group .col-sm-10 > span .ant-upload-list-item {
+    display: inline-block; }

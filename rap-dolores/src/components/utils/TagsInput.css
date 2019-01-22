@@ -1,0 +1,45 @@
+.TagsInput {
+  margin-bottom: 10px;
+  padding: 0.5rem 0.75rem;
+  padding-bottom: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem; }
+  .TagsInput .placeholder {
+    color: #ccc; }
+  .TagsInput .tag {
+    float: left;
+    margin-right: 0.4rem;
+    margin-bottom: 0.2rem;
+    border-radius: .4rem;
+    background-color: #eee; }
+    .TagsInput .tag:hover {
+      background-color: #ddd; }
+    .TagsInput .tag .label {
+      float: left;
+      padding: 0.2rem 0.5rem;
+      border-radius: .4rem 0 0 .4rem; }
+    .TagsInput .tag .remove {
+      float: left;
+      padding: 0.2rem 0.4rem;
+      border-left: 1px solid white;
+      border-radius: 0 .4rem .4rem 0;
+      color: #999;
+      cursor: pointer; }
+      .TagsInput .tag .remove:hover {
+        background-color: #4A7BF7;
+        color: white; }
+  .TagsInput .dropdown {
+    float: left;
+    position: relative; }
+    .TagsInput .dropdown .dropdown-input {
+      margin-bottom: 0.2rem;
+      padding: 0.2rem 0;
+      width: 6rem;
+      height: 2rem;
+      border: none;
+      outline: none; }
+    .TagsInput .dropdown .dropdown-menu {
+      position: absolute;
+      left: 0;
+      top: 2rem;
+      display: block; }

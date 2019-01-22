@@ -1,0 +1,13 @@
+.modal {
+  position: relative;
+  width: 760px;
+  height: 500px;
+  display: block;
+  z-index: 0; }
+  .modal > pre {
+    height: 100%; }
+
+.copy {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 1.4rem; }
