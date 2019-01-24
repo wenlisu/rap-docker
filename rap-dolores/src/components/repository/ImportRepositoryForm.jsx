@@ -109,7 +109,11 @@ class ImportRepositoryForm extends Component {
           resultData[fileList[i].name] = await this.readFile(fileList[i]).then(result => result);
         }
       }
-      this.props.importRepository({ tsjson: JSON.parse(resultData['ts.json'] || null), dtoJson: JSON.parse(resultData['dto.json'] || null), enumJson: JSON.parse(resultData['enum.json'] || null), orgId }, (res) => {
+      console.log(JSON.parse(resultData['controller.md']));
+      console.log(JSON.parse(resultData['dto.txt']));
+      console.log(JSON.parse(resultData['enum.txt']));
+      console.log(JSON.parse(resultData['topic.txt']));
+      this.props.importRepository({ tsjson: JSON.parse(resultData['controller.md'] || null), dtoJson: JSON.parse(resultData['dto.txt'] || null), enumJson: JSON.parse(resultData['enum.txt'] || null), cJson: JSON.parse(resultData['topic.txt'] || null),  orgId }, (res) => {
         if (res.isOk) {
           this.context.rmodal.resolve()
         } else {

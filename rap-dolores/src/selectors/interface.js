@@ -10,7 +10,7 @@ const interfaceSelector = (state) => {
   const itfId = +router.location.params.itf
   if (itfId > 0) {
     for (const mod of state.repository.data.modules) {
-      for(const type of mod) {
+      for(const type of mod.types) {
         for (const itf of type.interfaces) {
           if (itf.id === itfId) {
             return itf

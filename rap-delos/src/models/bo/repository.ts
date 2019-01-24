@@ -89,4 +89,9 @@ export default class Repository extends Model<Repository> {
   @BelongsToMany(() => Repository, () => RepositoriesCollaborators, 'collaboratorId')
   repositories: Repository[]
 
+  @AllowNull(false)
+  @Default("https://")
+  @Column(DataType.STRING(256))
+  url: string
+
 }

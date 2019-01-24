@@ -36,7 +36,6 @@ export default class Module extends Model<Module> {
   name: string
 
 
-  @AllowNull(false)
   @Column(DataType.TEXT)
   description: string
 
@@ -64,9 +63,4 @@ export default class Module extends Model<Module> {
 
   // @HasMany(() => Type, 'moduleId')
   // interfaces: Interface[]
-
-  @AllowNull(false)
-  @Default("https://")
-  @Column(DataType.STRING(256))
-  url: string
 }

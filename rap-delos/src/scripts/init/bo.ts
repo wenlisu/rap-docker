@@ -53,6 +53,7 @@ export const BO_REPOSITORY_FN = (source: any) => {
       name: '仓库@ctitle',
       description: '@cparagraph',
       logo: '@url',
+      url: undefined,
     }),
     source,
   )
@@ -67,7 +68,6 @@ export const BO_MODULE_FN = (source: any) => {
       description: '@cparagraph',
       repositoryId: undefined,
       creatorId: undefined,
-      url: undefined,
     }),
     source,
   )

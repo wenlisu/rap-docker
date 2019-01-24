@@ -2,7 +2,7 @@ import { Table, Column, Model, AutoIncrement, PrimaryKey, AllowNull, DataType, D
 import { User, Interface, Module, Type, Repository } from '../'
 
 export enum SCOPES { REQUEST = 'request', RESPONSE = 'response' }
-export enum TYPES { STRING = 'String', NUMBER = 'Number', BOOLEAN = 'Boolean', OBJECT = 'Object', ARRAY = 'Array', FUNCTION = 'Function', REGEXP = 'RegExp', LONG = 'Long' }
+export enum TYPES { STRING = 'String', NUMBER = 'Number', BOOLEAN = 'Boolean', OBJECT = 'Object', ARRAY = 'Array', FUNCTION = 'Function', REGEXP = 'RegExp', LONG = 'Long', INTEGER = 'Integer' }
 
 export enum REQUEST_PARAMS_TYPE {
   HEADERS = 1,
@@ -33,7 +33,7 @@ export default class Property extends Model<Property> {
 
   @AllowNull(false)
   @Column({
-    type: DataType.ENUM(TYPES.STRING, TYPES.NUMBER, TYPES.BOOLEAN, TYPES.OBJECT, TYPES.ARRAY, TYPES.FUNCTION, TYPES.REGEXP, TYPES.LONG),
+    type: DataType.ENUM(TYPES.STRING, TYPES.NUMBER, TYPES.BOOLEAN, TYPES.OBJECT, TYPES.ARRAY, TYPES.FUNCTION, TYPES.REGEXP, TYPES.LONG, TYPES.INTEGER),
     comment: 'property type',
   })
   /** Data Type */
@@ -46,6 +46,7 @@ export default class Property extends Model<Property> {
   pos: number
 
   @AllowNull(false)
+  @Default("")
   @Column(DataType.STRING(256))
   name: string
 

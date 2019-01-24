@@ -548,7 +548,7 @@ router.post('/type/update', async (ctx, next) => {
 router.get('/type/remove', async (ctx, next) => {
   let { id } = ctx.query
   let result =
-  await Type.destroy({ where: { typeId: id } })
+  await Type.destroy({ where: { id } })
   await Interface.destroy({ where: { typeId: id } })
   await Property.destroy({ where: { typeId: id } })
   ctx.body = {
@@ -1031,8 +1031,8 @@ router.post('/repository/importJson', async (ctx) => {
     }
     return
   }
-  const { tsjson, dtoJson, enumJson, orgId } = ctx.request.body
-  const result = await MigrateService.importFromJson(orgId, ctx.session.id, tsjson, dtoJson, enumJson);
+  const { tsjson, dtoJson, enumJson, cJson, orgId } = ctx.request.body
+  const result = await MigrateService.importFromJson(orgId, ctx.session.id, tsjson, dtoJson, enumJson, cJson);
   ctx.body = {
     isOk: result,
     message: result ? '导入成功' : '导入失败',

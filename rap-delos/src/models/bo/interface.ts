@@ -58,6 +58,7 @@ export default class Interface extends Model<Interface> {
   url: string
 
   @AllowNull(false)
+  @Default("POST")
   @Column({ comment: 'API method' })
   method: string
 

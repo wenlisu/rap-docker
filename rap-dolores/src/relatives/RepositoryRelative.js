@@ -279,7 +279,7 @@ export default {
           }
         case RepositoryAction.fetchRepositoryList().type:
           return {
-            data: [...state.data],
+            data: state.data ? [...state.data] : [],
             pagination: { ...state.pagination
             },
             fetching: true

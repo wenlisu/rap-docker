@@ -1,4 +1,4 @@
-import { Repository, Module, Interface, Property, User, Json, Dto, Enum } from "../models";
+import { Repository, Module, Interface, Property, User, Json, Dto, Enum, Type } from "../models";
 import { TYPES, SCOPES } from "../models/bo/property";
 import * as md5 from 'md5'
 import * as querystring from 'querystring'
@@ -6,6 +6,8 @@ import * as rp from 'request-promise'
 const isMd5 = require('is-md5')
 
 export default class MigrateService {
+  public static DTOreg: RegExp = /DTO\b/i;
+  public static Defaultreg: RegExp = /\bString\b|\bNumber\b|\bObject\b|\bArray\b|\bLong\b|\bInteger\b/i;
   public static async importRepoFromRAP1ProjectData(orgId: number, curUserId: number, projectData: any): Promise<boolean> {
     if (!projectData || !projectData.id || !projectData.name) return false
     let pCounter = 1
@@ -101,6 +103,7 @@ export default class MigrateService {
       ownerId: curUserId,
       creatorId: curUserId,
       organizationId: orgId,
+      url: projectData.url
     })
     for (const module of projectData.modules) {
       const mod = await Module.create({
@@ -109,12 +112,19 @@ export default class MigrateService {
         priority: mCounter++,
         creatorId: curUserId,
         repositoryId: repo.id,
-        url: module.url
       })
-      for (const page of module.interfaces) {
-          const requireUrl = mod.url + page.url;
+      for (const typeList of module.types) {
+        const typ = await Type.create({
+          name: typeList.name,
+          creatorId: curUserId,
+          repositoryId: repo.id,
+          moduleId: mod.id,
+        })
+        for (const page of typeList.interfaces) {
+          const requireUrl = repo.url + page.url;
           const itf = await Interface.create({
             moduleId: mod.id,
+            typeId: typ.id,
             name: `${page.name}`,
             description: page.description,
             url:  requireUrl || '',
@@ -126,7 +136,7 @@ export default class MigrateService {
           for (const action of page.properties) {
             await processParam(action, action.scope);
           }
-          async function processParam(p: NewParameter, scope: SCOPES, parentId?: number) {
+          async function processParam(p: any, scope: any, parentId?: number) {
           const name = p.name;
           let rule = '';
           let type = (p.type || 'string') && (p.type || 'string').split('<')[0] // array<number|string|object|boolean> => Array
@@ -155,6 +165,7 @@ export default class MigrateService {
               interfaceId: itf.id,
               creatorId: curUserId,
               moduleId: mod.id,
+              typeId: typ.id,
               repositoryId: repo.id,
               parentId: parentId || -1,
               required: p.required,
@@ -171,6 +182,7 @@ export default class MigrateService {
               interfaceId: itf.id,
               creatorId: curUserId,
               moduleId: mod.id,
+              typeId: typ.id,
               repositoryId: repo.id,
               parentId: parentId || -1,
               required: p.required,
@@ -182,6 +194,7 @@ export default class MigrateService {
             for (const subParam of p.parameterList) {
               processParam(subParam, scope, pCreated.id)
             }
+          }
           }
         }
       }
@@ -209,62 +222,151 @@ export default class MigrateService {
     }
   }
 
+  public static async onReadTopic(cJson: any): Promise<any> {
+    let json = cJson;
+    for (const mod of json.modules) {
+      for (const itf of mod.interfaces) {
+        let properties = [];
+        properties.push({
+          "scope": "response",
+          "type": itf.properties,
+          "description": itf.name
+        });
+        itf.properties = properties;
+      }
+    }
+    return json;
+  }
+
+  public static async onReadType(tJson: any, cJson: any): Promise<any> {
+    let cNewJson = await this.onReadTopic(cJson);
+    let json = tJson;
+    json.modules = [{
+      name: '默认',
+      types: tJson.modules
+    }, {
+      name: cJson.name,
+      description: cJson.description,
+      types: (cNewJson as any).modules
+    }];
+    return json;
+  }
+
+  public static async onReadAction(eJson: any, a: any): Promise<any> {
+    let action: any = a;
+    let type = MigrateService.DTOreg.test(a.type);
+    switch (a.scope) {
+      case SCOPES.REQUEST:
+        if (type) {
+          action.itemType = a.type
+          action.type = TYPES.OBJECT
+        } else if (a.type === "Integer") {
+          action.description = await this.onReadDes(eJson, a.description)
+        }
+        break;
+      default:
+        if (type && (a.type === 'ListDTO')) {
+          action.type = TYPES.ARRAY
+        } else if (type && (a.type !== 'ListDTO')) {
+          action.itemType = a.type
+          action.type = TYPES.OBJECT
+        }
+        break;
+    }
+    return action;
+  }
+
+  public static async onReadDes(eJson: any, type: any): Promise<any> {
+    let description: any;
+    let etype = eJson[type] || [];
+    etype.map((item: any) => {
+      description = description ? description + ` ${item.id}:${item.description}` : `${item.id}:${item.description}`;
+    })
+    return description;
+  }
+
+  public static async onReadProper(dJson: any, page: any): Promise<any> {
+    let properties: any = [];
+    let newPage = page;
+    if (newPage.request && newPage.request.length > 0) {
+      newPage.request.map((i: any) => properties.push({ "scope": "request", ...i }));
+    }
+    if (newPage.response && newPage.response.dataType && dJson[newPage.response.dataType] && dJson[newPage.response.dataType].length > 0) {
+      dJson[newPage.response.dataType].map((i: any) => {
+        return i.name !== 'data' && properties.push({ "scope": "response", ...i })
+      })
+      properties.push({
+        "name": "data",
+        ...newPage.response.data,
+      })
+    }
+    delete newPage.request;
+    delete newPage.response;
+    newPage.properties = properties;
+    return newPage;
+  }
+
   public static async onReadJson(tJson: any, dJson?: any, eJson?: any): Promise<boolean> {
     let json = tJson;
     for (const module of json.modules) {
-      for (const page of module.interfaces) {
-        for (const action of page.properties) {
-          if (action.parameterDTO) {
-            if (!dJson) return false;
-            async function processParam (parameterList: Array<any>, parameterData: any, scope: String): Promise<any> {
-              let description: String;
-              let type: any;
-              let typeDTO = /DTO\b/i.test(parameterData.type);
-              let typeDefault = /\bString\b|\bNumber\b|\bObject\b|\bArray\b|\bLong\b/i.test(parameterData.type);
-              if (typeDefault) {
-                type = parameterData.type;
-                description = parameterData.description;
-                parameterList.push({
-                  scope: scope,
-                  name: parameterData.name,
-                  type,
-                  description,
-                });
-              } else if (typeDTO) {
-                let dtype = dJson[parameterData.type];
-                type = TYPES.OBJECT;
-                description = parameterData.description;
-                (parameterList as any).parameterList = [];
-                let pparameterList = [];
-                for (const actionPChile of dtype) {
-                pparameterList = await processParam((parameterList as any).parameterList, actionPChile, scope);
+      for ( const typ of module.types) {
+        for (const pages of typ.interfaces) {
+          const page = await this.onReadProper(dJson, pages)
+          for (const a of page.properties) {
+            let action = await this.onReadAction(eJson, a)
+            if (action.itemType) {
+              if (!dJson) return false;
+              async function processParam (parameterList: Array<any>, parameterData: any, scope: String): Promise<any> {
+                let description: String;
+                let type: any;
+                let typeDTO = MigrateService.DTOreg.test(parameterData.itemType);
+                let typeDefault = MigrateService.Defaultreg.test(parameterData.itemType);
+                if (typeDefault) {
+                  type = parameterData.itemType;
+                  description = parameterData.description;
+                  parameterList.push({
+                    scope: scope,
+                    name: parameterData.name,
+                    type,
+                    description,
+                  });
+                } else if (typeDTO) {
+                  let dtype = dJson[parameterData.itemType];
+                  type = TYPES.OBJECT;
+                  description = parameterData.description;
+                  (parameterList as any).parameterList = [];
+                  let pparameterList = [];
+                  if (dtype && dtype.length > 0 ) {
+                    for (const actionPChile of dtype) {
+                      pparameterList = await processParam((parameterList as any).parameterList, actionPChile, scope);
+                      }
+                  }
+                  parameterList.push({
+                    scope: scope,
+                    name: parameterData.name,
+                    type,
+                    description,
+                    parameterList: pparameterList,
+                  });
+                } else {
+                  if (!eJson) return false;
+                  description = await MigrateService.onReadDes(eJson, parameterData.enumClass);
+                  type = parameterData.type;
+                  parameterList.push({
+                    scope: scope,
+                    name: parameterData.name,
+                    type,
+                    description,
+                  });
                 }
-                parameterList.push({
-                  scope: scope,
-                  name: parameterData.name,
-                  type,
-                  description,
-                  parameterList: pparameterList,
-                });
-              } else {
-                if (!eJson) return false;
-                let etype = eJson[parameterData.type] || [];
-                type = TYPES.NUMBER;
-                etype.map((item: any) => {
-                  description = description ? description + `${item.id}:${item.description}` : `${item.id}:${item.description}`;
-                })
-                parameterList.push({
-                  scope: scope,
-                  name: parameterData.name,
-                  type,
-                  description,
-                });
+                return parameterList as any;
               }
-              return parameterList as any;
-            }
-            action.parameterList = [];
-            for (const actionChile of dJson[action.parameterDTO]) {
-              processParam(action.parameterList, actionChile, action.scope)
+              if (dJson[action.itemType] && dJson[action.itemType].length > 0) {
+                action.parameterList = [];
+                for (const actionChile of dJson[action.itemType]) {
+                  processParam(action.parameterList, actionChile, action.scope)
+                }
+              }
             }
           }
         }
@@ -273,7 +375,7 @@ export default class MigrateService {
     return json;
   }
 
-  public static async onSaveJson(curUserId: number, tsjson: string, dtoJson?: string, enumJson?: string): Promise<any>  {
+  public static async onSaveJson(curUserId: number, tsjson: string, dtoJson?: string, enumJson?: string, cJson?: string): Promise<any>  {
     let tJson: any = await Json.create({
       json: tsjson,
       creatorId: curUserId,
@@ -294,8 +396,10 @@ export default class MigrateService {
       });
       eJson = eJson.dataValues.json;
     }
-    let json = tJson.dataValues.json.data;
+    let json = tJson.dataValues.json;
+    json = await this.onReadType(json, cJson);
     let newTsJson = await this.onReadJson(json, dJson, eJson);
+    console.log('newTsJson', newTsJson);
     await Json.update({
       json: newTsJson,
       creatorId: curUserId,
@@ -304,12 +408,12 @@ export default class MigrateService {
       where: { id: tJson.dataValues.id },
     })
     tJson = tJson.dataValues.json;
-    return tJson;
+    return false;
   }
 
   /** 存储JSON */
-  public static async importFromJson(orgId: number, curUserId: number, tsjson: string, dtoJson?: string, enumJson?: string): Promise<boolean> {
-    let tJson = await this.onSaveJson(curUserId, tsjson, dtoJson, enumJson);
+  public static async importFromJson(orgId: number, curUserId: number, tsjson: string, dtoJson?: string, enumJson?: string, cJson?: string): Promise<boolean> {
+    let tJson = await this.onSaveJson(curUserId, tsjson, dtoJson, enumJson, cJson);
     return await this.importRepoFromProjectData(orgId, curUserId, tJson)
   }
 
@@ -383,12 +487,12 @@ interface OldParameter {
   parameterList: OldParameter[]
 }
 
-interface NewParameter {
-  id: number
-  name: string
-  description: string
-  type: string
-  required: boolean
-  pos: number,
-  parameterList: NewParameter[]
-}
+// interface NewParameter {
+//   id: number
+//   name: string
+//   description: string
+//   type: string
+//   required: boolean
+//   pos: number,
+//   parameterList: NewParameter[]
+// }
