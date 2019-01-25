@@ -37,7 +37,7 @@ export async function init () {
   await Json.create(BO_JSON);
 
   // Dto
-  await Dto.create(BO_JSON);
+  await Dto.create({...BO_JSON, repositoryId: undefined});
 
   // Enum
   await Enum.create(BO_JSON);

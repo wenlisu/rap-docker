@@ -91,7 +91,7 @@ export default class MigrateService {
     return true
   }
 
-  public static async importRepoFromProjectData(orgId: number, curUserId: number, projectData: any): Promise<boolean> {
+  public static async importRepoFromProjectData(orgId: number, curUserId: number, projectData: any, dJson: any): Promise<boolean> {
     if (!projectData || !projectData.name) return false
     let pCounter = 1
     let mCounter = 1
@@ -105,6 +105,11 @@ export default class MigrateService {
       organizationId: orgId,
       url: projectData.url
     })
+    await Dto.update({
+      json: dJson,
+      creatorId: curUserId,
+      repositoryId: repo.id
+    }, { where: { id: dJson.dataValues.id } });
     for (const module of projectData.modules) {
       const mod = await Module.create({
         name: module.name,
@@ -139,9 +144,10 @@ export default class MigrateService {
           async function processParam(p: any, scope: any, parentId?: number) {
           const name = p.name;
           let rule = '';
-          let type = (p.type || 'string') && (p.type || 'string').split('<')[0] // array<number|string|object|boolean> => Array
+          let type = (p.type || 'string').split('<')[0] // array<number|string|object|boolean> => Array
           type = type && (type[0].toUpperCase() + type.slice(1)) // foo => Foo
-          if (type === 'Integer' || type === 'Long') {
+          // console.log(p.type);
+          if (p.type === 'Integer' || p.type === 'Long') {
             type = TYPES.NUMBER;
           }
           let value = ''
@@ -290,6 +296,7 @@ export default class MigrateService {
 
   public static async onReadProper(dJson: any, page: any): Promise<any> {
     let properties: any = [];
+    let description: string;
     let newPage = page;
     if (newPage.request && newPage.request.length > 0) {
       newPage.request.map((i: any) => properties.push({ "scope": "request", ...i }));
@@ -298,9 +305,17 @@ export default class MigrateService {
       dJson[newPage.response.dataType].map((i: any) => {
         return i.name !== 'data' && properties.push({ "scope": "response", ...i })
       })
+      if (!newPage.response.data.description) {
+        if (MigrateService.DTOreg.test(newPage.response.data.itemType)) {
+          description = newPage.response.data.itemType;
+        }
+      } else {
+        description = newPage.response.data.description;
+      }
       properties.push({
-        "name": "data",
         ...newPage.response.data,
+        "name": "data",
+        "description": description ? description : '',
       })
     }
     if (newPage.request || newPage.response) {
@@ -386,13 +401,15 @@ export default class MigrateService {
       creatorId: curUserId,
     });
     let dJson: any;
-    let eJson: any
+    let eJson: any;
+    let ndJson: any;
     if  (dtoJson) {
       dJson = await Dto.create({
         json: dtoJson,
         creatorId: curUserId,
+        repositoryId: undefined,
       });
-      dJson = dJson.dataValues.json;
+      ndJson = dJson.dataValues.json;
     }
     if (enumJson) {
       eJson = await Enum.create({
@@ -403,7 +420,7 @@ export default class MigrateService {
     }
     let json = tJson.dataValues.json;
     json = await this.onReadType(json, cJson);
-    let newTsJson = await this.onReadJson(json, dJson, eJson);
+    let newTsJson = await this.onReadJson(json, ndJson, eJson);
     await Json.update({
       json: newTsJson,
       creatorId: curUserId,
@@ -412,13 +429,21 @@ export default class MigrateService {
       where: { id: tJson.dataValues.id },
     })
     tJson = tJson.dataValues.json;
-    return tJson;
+    return {tJson: tJson, dJson: dJson};
   }
 
   /** 存储JSON */
   public static async importFromJson(orgId: number, curUserId: number, tsjson: string, dtoJson?: string, enumJson?: string, cJson?: string): Promise<boolean> {
-    let tJson = await this.onSaveJson(curUserId, tsjson, dtoJson, enumJson, cJson);
-    return await this.importRepoFromProjectData(orgId, curUserId, tJson)
+    let obj = await this.onSaveJson(curUserId, tsjson, dtoJson, enumJson, cJson);
+    return await this.importRepoFromProjectData(orgId, curUserId, obj.tJson, obj.dJson)
+  }
+
+  /** 导出DTOJSON */
+  public static async exportRepoDtoJson(repositoryId: number): Promise<boolean> {
+    let dJson = await Dto.findOne({
+      where: { id: repositoryId },
+    })
+    return dJson ? true : false;
   }
 
   /** 导出JSON */
