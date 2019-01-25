@@ -40,7 +40,7 @@ export default class Property extends Model<Property> {
   type: string
 
   @AllowNull(false)
-  @Default(2)
+  @Default(3)
   @Column
   /** request params type (position) */
   pos: number

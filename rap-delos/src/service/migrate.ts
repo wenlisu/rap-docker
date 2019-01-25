@@ -141,6 +141,9 @@ export default class MigrateService {
           let rule = '';
           let type = (p.type || 'string') && (p.type || 'string').split('<')[0] // array<number|string|object|boolean> => Array
           type = type && (type[0].toUpperCase() + type.slice(1)) // foo => Foo
+          if (type === 'Integer' || type === 'Long') {
+            type = TYPES.NUMBER;
+          }
           let value = ''
           if (/^function/.test(value)) type = 'Function' // @mock=function(){} => Function
           if (/^\$order/.test(value)) { // $order => Array|+1
@@ -300,8 +303,10 @@ export default class MigrateService {
         ...newPage.response.data,
       })
     }
-    delete newPage.request;
-    delete newPage.response;
+    if (newPage.request || newPage.response) {
+      delete newPage.request;
+      delete newPage.response;
+    }
     newPage.properties = properties;
     return newPage;
   }
@@ -399,7 +404,6 @@ export default class MigrateService {
     let json = tJson.dataValues.json;
     json = await this.onReadType(json, cJson);
     let newTsJson = await this.onReadJson(json, dJson, eJson);
-    console.log('newTsJson', newTsJson);
     await Json.update({
       json: newTsJson,
       creatorId: curUserId,
@@ -408,7 +412,7 @@ export default class MigrateService {
       where: { id: tJson.dataValues.id },
     })
     tJson = tJson.dataValues.json;
-    return false;
+    return tJson;
   }
 
   /** 存储JSON */
