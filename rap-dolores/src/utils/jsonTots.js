@@ -28,6 +28,7 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
                 jsonContent[key] = this.removeMajority(childObjectName) + ";";
             }
         } else if (_.isArray(value)) {
+           
             var arrayTypes = this.detectMultiArrayTypes(value);
             if (this.isMultiArray(arrayTypes)) {
                 var multiArrayBrackets = this.getMultiArrayBrackets(value);
@@ -36,12 +37,15 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
                 } else {
                     jsonContent[key] = "any" + multiArrayBrackets + ";";
                 }
-            } else if (value.length > 0 && _.isObject(value[0])) {
+            } else if (value && value.length > 0 && _.isObject(value[0])) {
                 var childObjectName = this.toUpperFirstLetter(key);
                 objectResult.push(this.convertObjectToTsInterfaces(value[0], childObjectName));
                 jsonContent[key] = this.removeMajority(childObjectName) + "[];";
             } else {
                 jsonContent[key] = arrayTypes[0];
+            }
+            if(key === 'bankCards?') {
+                console.log('value', value, this.detectMultiArrayTypes([1, 2]));
             }
         } else if (_.isDate(value)) {
             jsonContent[key] = "Date;";
@@ -65,7 +69,7 @@ Json2Ts.detectMultiArrayTypes = function (value, valueType) {
         valueType = [];
     }
     if (_.isArray(value)) {
-        if (value.length === 0) {
+        if (value && value.length === 0) {
             valueType.push("any[];");
         } else if (_.isArray(value[0])) {
             for (var index = 0, length_1 = value.length; index < length_1; index++) {

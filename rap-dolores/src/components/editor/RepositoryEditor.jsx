@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import ReactMarkdown from 'react-markdown'
+import clipboard from "clipboard-polyfill"
+import { GoClippy } from 'react-icons/lib/go'
+import { message } from 'antd';
+import { GoRepo, GoPencil, GoPlug, GoDatabase, GoJersey, GoLinkExternal } from 'react-icons/lib/go'
 import { PropTypes, connect, Link, replace, _ } from '../../family'
 import { serve } from '../../relatives/services/constant'
 import { RModal, Spin } from '../utils'
@@ -9,12 +14,13 @@ import TypeList from './TypeList'
 import InterfaceList from './InterfaceList'
 import InterfaceEditor from './InterfaceEditor'
 import DuplicatedInterfacesWarning from './DuplicatedInterfacesWarning'
-import { addRepository, updateRepository, clearRepository, fetchRepository } from '../../actions/repository'
+import { addRepository, updateRepository, clearRepository, fetchRepository, exportRepoDtoJson } from '../../actions/repository'
 import { addModule, updateModule, deleteModule, sortModuleList } from '../../actions/module'
 import { addType, updateType, deleteType, sortTypeList } from '../../actions/type'
 import { addInterface, updateInterface, deleteInterface, lockInterface, unlockInterface, sortInterfaceList } from '../../actions/interface'
 import { addProperty, updateProperty, deleteProperty, updateProperties, sortPropertyList } from '../../actions/property'
-import { GoRepo, GoPencil, GoPlug, GoDatabase, GoJersey, GoLinkExternal } from 'react-icons/lib/go'
+
+import { Tree } from '../utils'
 
 import './RepositoryEditor.css'
 import ExportPostmanForm from '../repository/ExportPostmanForm'
@@ -67,13 +73,16 @@ class RepositoryEditor extends Component {
     if (!this.props.repository.data || this.props.repository.data.id !== id) {
       this.props.onFetchRepository({ id })
     }
+    this.exportJson()
   }
 
   constructor (props) {
     super(props)
     this.state = {
       update: false,
-      exportPostman: false
+      exportPostman: false,
+      exportInterfece: false,
+      html: null
     }
   }
   render () {
@@ -103,7 +112,7 @@ class RepositoryEditor extends Component {
 
     let isOwned = repository.owner.id === auth.id
     let isJoined = repository.members.find(itme => itme.id === auth.id)
-
+    const input = '```js' + `\n${this.state.html}\n` + '```';
     return (
       <article className='RepositoryEditor'>
         <div className='header'>
@@ -125,9 +134,18 @@ class RepositoryEditor extends Component {
             <a href={`${serve}/app/plugin/${repository.id}`} target='_blank' className='api'><GoPlug /> 插件</a>
             <a href={`${serve}/repository/get?id=${repository.id}`} target='_blank' className='api'><GoDatabase /> 数据</a>
             <a href={`${serve}/test/test.plugin.jquery.html?id=${repository.id}`} target='_blank' className='api'><GoJersey /> 测试</a>
-            <span className='fake-link edit' onClick={e => this.setState({ exportPostman: true })}><GoLinkExternal /> 导出Postman Collection</span>
+            <span className='fake-link edit' onClick={e => this.setState({ exportPostman: true })}><GoLinkExternal /> 导出Postman Collection</span> 
+            <span className='fake-link edit' onClick={e => this.setState({ exportInterfece: true })}><GoLinkExternal /> 导出InterFaces</span> 
             <RModal when={this.state.exportPostman} onClose={e => this.setState({ exportPostman: false })} onResolve={e => this.setState({ exportPostman: false })}>
               <ExportPostmanForm title='导出到Postman' repoId={repository.id} />
+            </RModal>
+            <RModal when={this.state.exportInterfece} onClose={e => this.setState({ exportInterfece: false })} onResolve={e => this.setState({ exportInterfece: false })}>
+              <div>
+                <ReactMarkdown source={input} className={'modal'} />
+                <button type='button' className={`btn btn-secondary copy`} onClick={this.handleClippyButton}>
+                  <GoClippy className='fontsize-14' /> 复制
+                </button>
+              </div>
             </RModal>
           </div>
           <RepositorySearcher repository={repository} />
@@ -152,6 +170,29 @@ class RepositoryEditor extends Component {
   }
   componentWillUnmount () {
     // this.props.onClearRepository()
+  }
+  exportJson = async () => {
+    const { onExportRepoDtoJson, location } = this.props;
+    onExportRepoDtoJson({ id: location.params.id }, (res) => {
+      if(res.isOk) {
+        const value = res.repository.result.json.json;
+        this.onReadDto(value)
+      }
+    });
+  }
+  onReadDto = async (value) => {
+    let json = await Tree.JsonToTs(value, 'response');
+    this.setState({
+      html: json,
+    });
+  }
+
+  handleClippyButton = () => {
+    clipboard.writeText(`${this.state.html}`).then(() => {
+      message.success('复制成功', 1);
+    }).catch(() => {
+      message.warning('复制失败', 1);
+    });
   }
 }
 
@@ -183,7 +224,8 @@ const mapDispatchToProps = ({
   onUpdateProperty: updateProperty,
   onUpdateProperties: updateProperties,
   onDeleteProperty: deleteProperty,
-  onSortPropertyList: sortPropertyList
+  onSortPropertyList: sortPropertyList,
+  onExportRepoDtoJson: exportRepoDtoJson
 })
 export default connect(
   mapStateToProps,

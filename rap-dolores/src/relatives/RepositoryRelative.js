@@ -352,6 +352,8 @@ export default {
     [RepositoryAction.fetchRepositoryList().type]: RepositoryEffects.fetchRepositoryList,
 
     [RepositoryAction.importRepository().type]: RepositoryEffects.importRepository,
+    
+    [RepositoryAction.exportRepoDtoJson().type]: RepositoryEffects.exportRepoDtoJson,
 
     [RepositoryAction.fetchOwnedRepositoryList().type]: RepositoryEffects.fetchOwnedRepositoryList,
     [RepositoryAction.fetchJoinedRepositoryList().type]: RepositoryEffects.fetchJoinedRepositoryList,

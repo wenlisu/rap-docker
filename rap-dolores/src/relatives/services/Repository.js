@@ -56,6 +56,15 @@ export default {
     })
       .then(res => res.json())
   },
+  exportRepoDtoJson (data) {
+    return fetch(`${serve}/repository/exportDJson`, {
+      ...CREDENTIALS,
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => res.json())
+  },
   deleteRepository (id) {
     return fetch(`${serve}/repository/remove?id=${id}`, { ...CREDENTIALS })
       .then(res => res.json())

@@ -73,6 +73,21 @@ export function * importRepository (action) {
   }
 }
 
+export function * exportRepoDtoJson (action) {
+  try {
+    const res = yield call(RepositoryService.exportRepoDtoJson, action.data)
+    if (res.isOk) {
+      yield put(RepositoryAction.exportRepoDtoJsonSucceeded(res.data))
+      if (action.onResolved) action.onResolved(res)
+    } else {
+      throw new Error(res.message)
+    }
+  } catch (e) {
+    console.error(e.message)
+    yield put(RepositoryAction.exportRepoDtoJsonFailed(e.message))
+  }
+}
+
 export function * fetchRepository (action) {
   try {
     const count = yield call(RepositoryService.fetchRepository, action.repository || action.id)

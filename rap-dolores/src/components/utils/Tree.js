@@ -45,10 +45,11 @@ const treeToJson = (tree, tsStatus = false) => {
     }
     switch (item.type) {
       case 'String':
+        if(value === undefined) value = ''
         result[item.name + rule] = value
         break
       case 'Number': // √ BUG Number 如果没有输入初始值，会导致值变成字符串，所以需要对每种类型做特殊的初始值处理
-        if (value === '') value = 1 // 如果未填初始值，则默认为 1
+        if (value === '' || value === undefined) value = 1 // 如果未填初始值，则默认为 1
         let parsed = parseFloat(value) // 尝试解析初始值，如果失败，则填什么是什么（字符串）
         if (!isNaN(parsed)) value = parsed
         result[item.name + rule] = value
@@ -80,7 +81,7 @@ const treeToJson = (tree, tsStatus = false) => {
           }
         } else {
           result[item.name + rule] = {}
-          item.children.forEach(child => {
+          item.children && item.children.forEach(child => {
             parse(child, result[item.name + rule])
           })
         }
@@ -94,8 +95,8 @@ const treeToJson = (tree, tsStatus = false) => {
             result[item.name + rule] = item.value
           }
         } else {
-          result[item.name + rule] = item.children.length ? [{}] : []
-          item.children.forEach(child => {
+          result[item.name + rule] = item.children && item.children.length ? [{}] : []
+          item.children && item.children.forEach(child => {
             parse(child, result[item.name + rule][0])
           })
         }
@@ -134,7 +135,7 @@ export default {
   JsonToTs: (tree, scope) => {
     try {
       let jsonData = treeToJson(tree, true);
-      console.log('jsonData', jsonData);
+      // console.log('jsonData', jsonData);
       return Json2Ts.convert(jsonData, scope);
     } catch (e) {
       return e.message

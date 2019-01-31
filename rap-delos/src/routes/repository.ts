@@ -1041,3 +1041,23 @@ router.post('/repository/importJson', async (ctx) => {
     }
   }
 })
+
+router.post('/repository/exportDJson', async (ctx) => {
+  if (!ctx.session || !ctx.session.id) {
+    ctx.body = {
+      isOk: false,
+      message: 'NOT LOGIN'
+    }
+    return
+  }
+  const { id } = ctx.request.body
+  const result = await MigrateService.exportRepoDtoJson(id);
+  ctx.body = {
+    isOk: result ? true : false,
+    message: result ? '导出成功' : '导出失败',
+    repository: {
+      id: 1,
+      result,
+    }
+  }
+})

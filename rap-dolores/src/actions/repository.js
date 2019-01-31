@@ -6,6 +6,10 @@ export const importRepository = (data, onResolved) => ({ type: 'REPOSITORY_IMPOR
 export const importRepositorySucceeded = () => ({ type: 'REPOSITORY_IMPORT_SUCCEEDED' })
 export const importRepositoryFailed = (message) => ({ type: 'REPOSITORY_IMPORT_FAILED', message })
 
+export const exportRepoDtoJson = (data, onResolved) => ({ type: 'REPOSITORY_EXPORTDTOJSON', onResolved, data })
+export const exportRepoDtoJsonSucceeded = () => ({ type: 'REPOSITORY_EXPORTDTOJSON_SUCCEEDED' })
+export const exportRepoDtoJsonFailed = (message) => ({ type: 'REPOSITORY_EXPORTDTOJSON_FAILED', message })
+
 export const updateRepository = (repository, onResolved) => ({ type: 'REPOSITORY_UPDATE', repository, onResolved })
 export const updateRepositorySucceeded = (repository) => ({ type: 'REPOSITORY_UPDATE_SUCCEEDED', repository })
 export const updateRepositoryFailed = (message) => ({ type: 'REPOSITORY_UPDATE_FAILED', message })
