@@ -135,7 +135,6 @@ export default {
   JsonToTs: (tree, scope) => {
     try {
       let jsonData = treeToJson(tree, true);
-      // console.log('jsonData', jsonData);
       return Json2Ts.convert(jsonData, scope);
     } catch (e) {
       return e.message
