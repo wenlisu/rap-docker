@@ -110,7 +110,7 @@ Json2Ts.getMultiArrayBrackets = function (content) {
 };
 Json2Ts.formatCharsToTypeScript = function (jsonContent, objectName, optionalKeys) {
     var result = JSON.stringify(jsonContent, null, 2) && JSON.stringify(jsonContent, null, 2)
-        .replace(new RegExp("[a-zA-z]+_description\": *", "g"), "")
+        .replace(new RegExp("[a-zA-z0-9]+_description\": *", "g"), "")
         .replace(new RegExp("\"", "g"), "")
         .replace(new RegExp(",", "g"), "");
     var allKeys = _.allKeys(jsonContent);

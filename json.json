@@ -89,10 +89,6 @@
         "url": "/req/c/baccarat/closeRoom",
         "name": "closeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -115,10 +111,6 @@
         "url": "/req/c/baccarat/finishGame",
         "name": "finishGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -141,10 +133,6 @@
         "url": "/req/c/baccarat/finishScreening",
         "name": "finishScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -171,10 +159,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -218,10 +202,6 @@
         "url": "/req/c/baccarat/getRoom",
         "name": "getRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -393,10 +373,6 @@
         "url": "/req/c/baccarat/invalidateGame",
         "name": "invalidateGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -419,10 +395,6 @@
         "url": "/req/c/baccarat/openGame",
         "name": "openGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -445,10 +417,6 @@
         "url": "/req/c/baccarat/openRoom",
         "name": "openRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -471,10 +439,6 @@
         "url": "/req/c/baccarat/openScreening",
         "name": "openScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -497,10 +461,6 @@
         "url": "/req/c/baccarat/resetCard",
         "name": "resetCard",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -523,10 +483,6 @@
         "url": "/req/c/baccarat/resumeRoom",
         "name": "resumeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -553,10 +509,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "1:闲1 2:庄1 3:闲2 4:庄2 5:闲3 6:庄3"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -600,10 +552,6 @@
         "url": "/req/c/baccarat/skipBetStage",
         "name": "skipBetStage",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -626,10 +574,6 @@
         "url": "/req/c/baccarat/suspendRoom",
         "name": "suspendRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -652,10 +596,6 @@
         "url": "/req/c/baccarat/tryToGetGameResult",
         "name": "tryToGetGameResult",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -732,10 +672,6 @@
             }]
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -783,10 +719,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -889,13 +821,13 @@
               "type": "Object",
               "description": "百家乐赌注对象 - 闲",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -905,12 +837,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -921,13 +853,13 @@
               "type": "Object",
               "description": "百家乐游戏结果 - 局对象列表",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -937,12 +869,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -1093,13 +1025,13 @@
               "type": "Object",
               "description": "百家乐赌注对象 - 闲",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -1109,12 +1041,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -1125,13 +1057,13 @@
               "type": "Object",
               "description": "百家乐游戏结果 - 局对象列表",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:闲 3:和 4:庄对 5:闲对"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -1141,12 +1073,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -1291,10 +1223,6 @@
         "url": "/req/p/baccarat/getBaccaratPlayerProfile",
         "name": "getBaccaratPlayerProfile",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1330,10 +1258,6 @@
         "url": "/req/p/baccarat/getBetRecord",
         "name": "getBetRecord",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1365,10 +1289,6 @@
         "url": "/req/p/baccarat/getRooms",
         "name": "getRoomInfos",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1467,10 +1387,6 @@
         "url": "/req/p/baccarat/getRoomMemberNum",
         "name": "getRoomMemberNum",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1511,10 +1427,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -1569,10 +1481,6 @@
             "scope": "request",
             "description": "首页首条ID，获取首页或者网页版不需要传"
           }]
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -1629,10 +1537,6 @@
             "description": "列表"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1672,10 +1576,6 @@
         "url": "/req/c/cattle/closeRoom",
         "name": "closeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1698,10 +1598,6 @@
         "url": "/req/c/cattle/finishGame",
         "name": "finishGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1724,10 +1620,6 @@
         "url": "/req/c/cattle/finishScreening",
         "name": "finishScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1754,10 +1646,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -1801,10 +1689,6 @@
         "url": "/req/c/cattle/getRoom",
         "name": "getRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -1980,10 +1864,6 @@
         "url": "/req/c/cattle/invalidateGame",
         "name": "invalidateGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2006,10 +1886,6 @@
         "url": "/req/c/cattle/openGame",
         "name": "openGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2032,10 +1908,6 @@
         "url": "/req/c/cattle/openRoom",
         "name": "openRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2058,10 +1930,6 @@
         "url": "/req/c/cattle/openScreening",
         "name": "openScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2084,10 +1952,6 @@
         "url": "/req/c/cattle/resetCard",
         "name": "resetCard",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2110,10 +1974,6 @@
         "url": "/req/c/cattle/resumeRoom",
         "name": "resumeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2140,10 +2000,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "1:闲1 2:庄1 3:闲2 4:庄2 5:闲3 6:庄3 7:闲4 8:庄4 9:闲5 10:庄5"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -2187,10 +2043,6 @@
         "url": "/req/c/cattle/skipBetStage",
         "name": "skipBetStage",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2213,10 +2065,6 @@
         "url": "/req/c/cattle/suspendRoom",
         "name": "suspendRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2239,10 +2087,6 @@
         "url": "/req/c/cattle/tryToGetGameResult",
         "name": "tryToGetGameResult",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2322,10 +2166,6 @@
             }]
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2369,10 +2209,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -2471,13 +2307,13 @@
               "type": "Object",
               "description": "赌注对象 - 庄翻倍",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -2487,12 +2323,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -2503,13 +2339,13 @@
               "type": "Object",
               "description": "游戏结果 - 局对象列表",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -2519,12 +2355,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -2654,13 +2490,13 @@
               "type": "Object",
               "description": "赌注对象 - 庄翻倍",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -2670,12 +2506,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -2686,13 +2522,13 @@
               "type": "Object",
               "description": "游戏结果 - 局对象列表",
               "parameterList": [{
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
-              }, {
                 "name": "roomID",
                 "type": "long",
                 "description": "房间ID"
+              }, {
+                "name": "betID",
+                "type": "Integer",
+                "description": "1:庄 2:庄翻倍 3:闲 4:闲翻倍"
               }, {
                 "name": "gameCode",
                 "type": "String",
@@ -2702,12 +2538,12 @@
                 "type": "Integer",
                 "description": "下注成员数量"
               }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "totalBetAmount",
                 "type": "Integer",
                 "description": "总的下注金额"
-              }, {
-                "name": "gameNo",
-                "type": "int"
               }, {
                 "name": "winCampID",
                 "type": "Integer",
@@ -2831,10 +2667,6 @@
         "url": "/req/p/cattle/getBetRecord",
         "name": "getBetRecord",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2866,10 +2698,6 @@
         "url": "/req/p/cattle/getPlayerProfile",
         "name": "getPlayerProfile",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -2905,10 +2733,6 @@
         "url": "/req/p/cattle/getRooms",
         "name": "getRoomInfos",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -3009,10 +2833,6 @@
         "url": "/req/p/cattle/getRoomMemberNum",
         "name": "getRoomMemberNum",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -3053,10 +2873,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -3111,10 +2927,6 @@
             "scope": "request",
             "description": "首页首条ID，获取首页或者网页版不需要传"
           }]
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -3171,10 +2983,6 @@
             "description": "列表"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -3214,10 +3022,6 @@
         "url": "/req/p/hall/getRecommendGames",
         "name": "getRecommondGames",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -3245,10 +3049,6 @@
         "url": "/req/p/hall/getWebHall",
         "name": "getWebHall",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -3298,18 +3098,10 @@
               "type": "Integer",
               "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
-              "name": "betRemainMills",
-              "type": "Long",
-              "description": "剩余下注倒计时：毫秒"
-            }, {
               "name": "road",
               "type": "Object",
               "description": "路图 (可为空)",
               "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
                 "name": "roomID",
                 "type": "Long",
                 "description": "房间id"
@@ -3318,9 +3110,6 @@
                 "type": "Object",
                 "description": "百家乐游戏结果 - 局对象列表",
                 "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -3368,8 +3157,106 @@
                 "description": "游戏结果 - 局对象列表",
                 "parameterList": [{
                   "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
                   "type": "Integer"
                 }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }]
+            }, {
+              "name": "road",
+              "type": "Object",
+              "description": "路图 (可为空)",
+              "parameterList": [{
+                "name": "roomID",
+                "type": "Long",
+                "description": "房间id"
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "百家乐游戏结果 - 局对象列表",
+                "parameterList": [{
+                  "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "游戏结果 - 局对象列表",
+                "parameterList": [{
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -3412,165 +3299,58 @@
                   "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
                 }]
               }]
+            }, {
+              "name": "betRemainMills",
+              "type": "Long",
+              "description": "剩余下注倒计时：毫秒"
+            }, {
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
             }, {
               "name": "roomMemberNum",
               "type": "Integer",
               "description": "房间人数"
             }, {
-              "name": "road",
-              "type": "Object",
-              "description": "路图 (可为空)",
-              "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
-                "name": "roomID",
-                "type": "Long",
-                "description": "房间id"
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "百家乐游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }]
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
+            }, {
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
             }, {
               "name": "roomNo",
               "type": "Integer",
               "description": "房间号"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
+            }, {
+              "name": "gameNo",
+              "type": "Integer",
+              "description": "当前局号（第几局）"
             }, {
               "name": "name",
               "type": "String",
               "description": "房间名称"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
-            }, {
-              "name": "sceneNo",
+              "name": "gameNo",
               "type": "Integer",
-              "description": "场号（第几场）"
+              "description": "当前局号（第几局）"
             }, {
               "name": "minConsumption",
               "type": "Integer",
               "description": "低消"
             }, {
-              "name": "sceneNo",
+              "name": "state",
               "type": "Integer",
-              "description": "场号（第几场）"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
+              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "maxConsumption",
               "type": "Integer",
               "description": "高消"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
-            }, {
-              "name": "state",
-              "type": "Integer",
-              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "state",
               "type": "Integer",
@@ -3645,18 +3425,10 @@
               "type": "Integer",
               "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
-              "name": "betRemainMills",
-              "type": "Long",
-              "description": "剩余下注倒计时：毫秒"
-            }, {
               "name": "road",
               "type": "Object",
               "description": "路图 (可为空)",
               "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
                 "name": "roomID",
                 "type": "Long",
                 "description": "房间id"
@@ -3665,9 +3437,6 @@
                 "type": "Object",
                 "description": "百家乐游戏结果 - 局对象列表",
                 "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -3715,8 +3484,106 @@
                 "description": "游戏结果 - 局对象列表",
                 "parameterList": [{
                   "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
                   "type": "Integer"
                 }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }]
+            }, {
+              "name": "road",
+              "type": "Object",
+              "description": "路图 (可为空)",
+              "parameterList": [{
+                "name": "roomID",
+                "type": "Long",
+                "description": "房间id"
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "百家乐游戏结果 - 局对象列表",
+                "parameterList": [{
+                  "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "游戏结果 - 局对象列表",
+                "parameterList": [{
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -3759,165 +3626,58 @@
                   "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
                 }]
               }]
+            }, {
+              "name": "betRemainMills",
+              "type": "Long",
+              "description": "剩余下注倒计时：毫秒"
+            }, {
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
             }, {
               "name": "roomMemberNum",
               "type": "Integer",
               "description": "房间人数"
             }, {
-              "name": "road",
-              "type": "Object",
-              "description": "路图 (可为空)",
-              "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
-                "name": "roomID",
-                "type": "Long",
-                "description": "房间id"
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "百家乐游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }]
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
+            }, {
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
             }, {
               "name": "roomNo",
               "type": "Integer",
               "description": "房间号"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
+            }, {
+              "name": "gameNo",
+              "type": "Integer",
+              "description": "当前局号（第几局）"
             }, {
               "name": "name",
               "type": "String",
               "description": "房间名称"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
-            }, {
-              "name": "sceneNo",
+              "name": "gameNo",
               "type": "Integer",
-              "description": "场号（第几场）"
+              "description": "当前局号（第几局）"
             }, {
               "name": "minConsumption",
               "type": "Integer",
               "description": "低消"
             }, {
-              "name": "sceneNo",
+              "name": "state",
               "type": "Integer",
-              "description": "场号（第几场）"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
+              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "maxConsumption",
               "type": "Integer",
               "description": "高消"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
-            }, {
-              "name": "state",
-              "type": "Integer",
-              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "state",
               "type": "Integer",
@@ -3992,18 +3752,10 @@
               "type": "Integer",
               "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
-              "name": "betRemainMills",
-              "type": "Long",
-              "description": "剩余下注倒计时：毫秒"
-            }, {
               "name": "road",
               "type": "Object",
               "description": "路图 (可为空)",
               "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
                 "name": "roomID",
                 "type": "Long",
                 "description": "房间id"
@@ -4012,9 +3764,6 @@
                 "type": "Object",
                 "description": "百家乐游戏结果 - 局对象列表",
                 "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -4062,8 +3811,106 @@
                 "description": "游戏结果 - 局对象列表",
                 "parameterList": [{
                   "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
                   "type": "Integer"
                 }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }]
+            }, {
+              "name": "road",
+              "type": "Object",
+              "description": "路图 (可为空)",
+              "parameterList": [{
+                "name": "roomID",
+                "type": "Long",
+                "description": "房间id"
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "百家乐游戏结果 - 局对象列表",
+                "parameterList": [{
+                  "name": "bankCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer"
+                }, {
+                  "name": "playCardSuitTypeID",
+                  "type": "Integer",
+                  "description": "null:无牛 null:有牛"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "roomID",
+                  "type": "long",
+                  "description": "房间ID"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameCode",
+                  "type": "String",
+                  "description": "游戏局编号"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "gameNo",
+                  "type": "int"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }, {
+                  "name": "winCampID",
+                  "type": "Integer",
+                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
+                }]
+              }, {
+                "name": "gameResults",
+                "type": "Object",
+                "description": "游戏结果 - 局对象列表",
+                "parameterList": [{
                   "name": "bankCardSuitTypeID",
                   "type": "Integer",
                   "description": "null:无牛 null:有牛"
@@ -4106,165 +3953,58 @@
                   "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
                 }]
               }]
+            }, {
+              "name": "betRemainMills",
+              "type": "Long",
+              "description": "剩余下注倒计时：毫秒"
+            }, {
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
             }, {
               "name": "roomMemberNum",
               "type": "Integer",
               "description": "房间人数"
             }, {
-              "name": "road",
-              "type": "Object",
-              "description": "路图 (可为空)",
-              "parameterList": [{
-                "name": "roomID",
-                "type": "Long",
-                "description": "百家乐房间id"
-              }, {
-                "name": "roomID",
-                "type": "Long",
-                "description": "房间id"
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "百家乐游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }, {
-                "name": "gameResults",
-                "type": "Object",
-                "description": "游戏结果 - 局对象列表",
-                "parameterList": [{
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "bankCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer"
-                }, {
-                  "name": "playCardSuitTypeID",
-                  "type": "Integer",
-                  "description": "null:无牛 null:有牛"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "roomID",
-                  "type": "long",
-                  "description": "房间ID"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameCode",
-                  "type": "String",
-                  "description": "游戏局编号"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "gameNo",
-                  "type": "int"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }, {
-                  "name": "winCampID",
-                  "type": "Integer",
-                  "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-                }]
-              }]
+              "name": "roomID",
+              "type": "long",
+              "description": "roomID"
+            }, {
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
             }, {
               "name": "roomNo",
               "type": "Integer",
               "description": "房间号"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
+              "name": "sceneNo",
+              "type": "Integer",
+              "description": "场号（第几场）"
+            }, {
+              "name": "gameNo",
+              "type": "Integer",
+              "description": "当前局号（第几局）"
             }, {
               "name": "name",
               "type": "String",
               "description": "房间名称"
             }, {
-              "name": "roomID",
-              "type": "long",
-              "description": "roomID"
-            }, {
-              "name": "sceneNo",
+              "name": "gameNo",
               "type": "Integer",
-              "description": "场号（第几场）"
+              "description": "当前局号（第几局）"
             }, {
               "name": "minConsumption",
               "type": "Integer",
               "description": "低消"
             }, {
-              "name": "sceneNo",
+              "name": "state",
               "type": "Integer",
-              "description": "场号（第几场）"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
+              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "maxConsumption",
               "type": "Integer",
               "description": "高消"
-            }, {
-              "name": "gameNo",
-              "type": "Integer",
-              "description": "当前局号（第几局）"
-            }, {
-              "name": "state",
-              "type": "Integer",
-              "description": "1:下注阶段 2:结算 3:洗牌（场结算） 4:房间暂停状态 6:房间关闭状态 7:局结束状态 8:局通关状态"
             }, {
               "name": "state",
               "type": "Integer",
@@ -4329,10 +4069,6 @@
         "url": "/req/c/illustrating/closeRoom",
         "name": "closeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4355,10 +4091,6 @@
         "url": "/req/c/illustrating/finishGame",
         "name": "finishGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4381,10 +4113,6 @@
         "url": "/req/c/illustrating/finishScreening",
         "name": "finishScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4411,10 +4139,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -4458,10 +4182,6 @@
         "url": "/req/c/illustrating/getRoom",
         "name": "getRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4525,16 +4245,16 @@
             "parameterList": [{
               "name": "roomID",
               "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
               "description": "房间id"
             }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
               "name": "positionID",
               "type": "Integer",
               "description": "null:龙1 null:虎1"
@@ -4550,12 +4270,6 @@
               "name": "cardID",
               "type": "Integer",
               "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
             }, {
               "name": "gameResults",
               "type": "Object",
@@ -4576,6 +4290,12 @@
                 "type": "Integer",
                 "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
               }]
+            }, {
+              "name": "visible",
+              "type": "Boolean"
+            }, {
+              "name": "visible",
+              "type": "Boolean"
             }, {
               "name": "receivedCardMills",
               "type": "Long",
@@ -4592,16 +4312,16 @@
             "parameterList": [{
               "name": "roomID",
               "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
               "description": "房间id"
             }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
               "name": "positionID",
               "type": "Integer",
               "description": "null:龙1 null:虎1"
@@ -4617,12 +4337,6 @@
               "name": "cardID",
               "type": "Integer",
               "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
             }, {
               "name": "gameResults",
               "type": "Object",
@@ -4643,6 +4357,12 @@
                 "type": "Integer",
                 "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
               }]
+            }, {
+              "name": "visible",
+              "type": "Boolean"
+            }, {
+              "name": "visible",
+              "type": "Boolean"
             }, {
               "name": "receivedCardMills",
               "type": "Long",
@@ -4659,16 +4379,16 @@
             "parameterList": [{
               "name": "roomID",
               "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
-              "description": "房间id (翻牌请求可以不传)"
-            }, {
-              "name": "roomID",
-              "type": "Long",
               "description": "房间id"
             }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
+              "name": "roomID",
+              "type": "Long",
+              "description": "房间id (翻牌请求可以不传)"
+            }, {
               "name": "positionID",
               "type": "Integer",
               "description": "null:龙1 null:虎1"
@@ -4684,12 +4404,6 @@
               "name": "cardID",
               "type": "Integer",
               "description": "1:A♠ 2:A♥ 3:A♣ 4:A♦ 5:2♠ 6:2♥ 7:2♣ 8:2♦ 9:3♠ 10:3♥ 11:3♣ 12:3♦ 13:4♠ 14:4♥ 15:4♣ 16:4♦ 17:5♠ 18:5♥ 19:5♣ 20:5♦ 21:6♠ 22:6♥ 23:6♣ 24:6♦ 25:7♠ 26:7♥ 27:7♣ 28:7♦ 29:8♠ 30:8♥ 31:8♣ 32:8♦ 33:9♠ 34:9♥ 35:9♣ 36:9♦ 37:10♠ 38:10♥ 39:10♣ 40:10♦ 41:J♠ 42:J♥ 43:J♣ 44:J♦ 45:Q♠ 46:Q♥ 47:Q♣ 48:Q♦ 49:K♠ 50:K♥ 51:K♣ 52:K♦"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
-            }, {
-              "name": "visible",
-              "type": "Boolean"
             }, {
               "name": "gameResults",
               "type": "Object",
@@ -4711,6 +4425,12 @@
                 "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
               }]
             }, {
+              "name": "visible",
+              "type": "Boolean"
+            }, {
+              "name": "visible",
+              "type": "Boolean"
+            }, {
               "name": "receivedCardMills",
               "type": "Long",
               "description": "翻牌至今毫秒数（visible=false时receivedCardMills才有效）"
@@ -4726,10 +4446,6 @@
         "url": "/req/c/illustrating/invalidateGame",
         "name": "invalidateGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4752,10 +4468,6 @@
         "url": "/req/c/illustrating/openGame",
         "name": "openGame",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4778,10 +4490,6 @@
         "url": "/req/c/illustrating/openRoom",
         "name": "openRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4804,10 +4512,6 @@
         "url": "/req/c/illustrating/openScreening",
         "name": "openScreening",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4830,10 +4534,6 @@
         "url": "/req/c/illustrating/resetCard",
         "name": "resetCard",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4856,10 +4556,6 @@
         "url": "/req/c/illustrating/resumeRoom",
         "name": "resumeRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4886,10 +4582,6 @@
           "type": "Integer",
           "scope": "request",
           "description": "null:龙1 null:虎1"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -4933,10 +4625,6 @@
         "url": "/req/c/illustrating/skipBetStage",
         "name": "skipBetStage",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4959,10 +4647,6 @@
         "url": "/req/c/illustrating/suspendRoom",
         "name": "suspendRoom",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -4985,10 +4669,6 @@
         "url": "/req/c/illustrating/tryToGetGameResult",
         "name": "tryToGetGameResult",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5059,10 +4739,6 @@
             }]
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5102,10 +4778,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -5200,31 +4872,26 @@
               "type": "Object",
               "description": "龙虎游戏结果 - 局",
               "parameterList": [{
+                "name": "roomID",
+                "type": "long",
+                "description": "房间ID"
+              }, {
+                "name": "gameCode",
+                "type": "String",
+                "description": "游戏局编号"
+              }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "winCampID",
                 "type": "Integer",
                 "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-              }, {
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:虎 2:龙 3:和"
-              }, {
-                "name": "memberNum",
-                "type": "Integer",
-                "description": "下注成员数量"
-              }, {
-                "name": "totalBetAmount",
-                "type": "Integer",
-                "description": "总的下注金额"
               }]
             }, {
               "name": "dragonBet",
               "type": "Object",
               "description": "赌注对象 - 龙",
               "parameterList": [{
-                "name": "winCampID",
-                "type": "Integer",
-                "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-              }, {
                 "name": "betID",
                 "type": "Integer",
                 "description": "1:虎 2:龙 3:和"
@@ -5361,31 +5028,26 @@
               "type": "Object",
               "description": "龙虎游戏结果 - 局",
               "parameterList": [{
+                "name": "roomID",
+                "type": "long",
+                "description": "房间ID"
+              }, {
+                "name": "gameCode",
+                "type": "String",
+                "description": "游戏局编号"
+              }, {
+                "name": "gameNo",
+                "type": "int"
+              }, {
                 "name": "winCampID",
                 "type": "Integer",
                 "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-              }, {
-                "name": "betID",
-                "type": "Integer",
-                "description": "1:虎 2:龙 3:和"
-              }, {
-                "name": "memberNum",
-                "type": "Integer",
-                "description": "下注成员数量"
-              }, {
-                "name": "totalBetAmount",
-                "type": "Integer",
-                "description": "总的下注金额"
               }]
             }, {
               "name": "dragonBet",
               "type": "Object",
               "description": "赌注对象 - 龙",
               "parameterList": [{
-                "name": "winCampID",
-                "type": "Integer",
-                "description": "游戏赢方, 1.百家乐：BaccaratWinCamp，2.龙虎：IllustratingWinCamp 3.牛牛：CattleWinCamp"
-              }, {
                 "name": "betID",
                 "type": "Integer",
                 "description": "1:虎 2:龙 3:和"
@@ -5516,10 +5178,6 @@
         "url": "/req/p/illustrating/getBetRecord",
         "name": "getBetRecord",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5551,10 +5209,6 @@
         "url": "/req/p/illustrating/getPlayerProfile",
         "name": "getPlayerProfile",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5590,10 +5244,6 @@
         "url": "/req/p/illustrating/getRooms",
         "name": "getRoomInfos",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5686,10 +5336,6 @@
         "url": "/req/p/illustrating/getRoomMemberNum",
         "name": "getRoomMemberNum",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5730,10 +5376,6 @@
           "type": "Long",
           "scope": "request",
           "description": "房间ID"
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -5788,10 +5430,6 @@
             "scope": "request",
             "description": "首页首条ID，获取首页或者网页版不需要传"
           }]
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -5848,10 +5486,6 @@
             "description": "列表"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5903,10 +5537,6 @@
             "description": "1, Web 2, App端"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5938,10 +5568,6 @@
         "url": "/req/p/payment/getRechargeCapitalSources",
         "name": "getRechargeCapitalSources",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -5969,10 +5595,6 @@
         "url": "/req/p/payment/getWithdrawCapitalSources",
         "name": "getWithdrawCapitalSources",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6026,10 +5648,6 @@
             "scope": "request",
             "description": "客户端类型 1:Web 2:安卓 3:苹果"
           }]
-        }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
         }, {
           "name": "code",
           "type": "Integer",
@@ -6102,10 +5720,6 @@
             "description": "提现密码"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6157,10 +5771,6 @@
             "description": "旧密码"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6183,10 +5793,6 @@
         "url": "/req/p/user/getPlayer",
         "name": "getPlayer",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6222,10 +5828,6 @@
         "url": "/req/p/user/ping",
         "name": "ping",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6290,10 +5892,6 @@
             "description": "首页首条ID，获取首页或者网页版不需要传"
           }]
         }, {
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6344,10 +5942,6 @@
         "url": "/topic/baccarat/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6391,10 +5985,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6438,10 +6028,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/game-result",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6485,10 +6071,6 @@
         "url": "/topic/baccarat/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6535,10 +6117,6 @@
         "url": "/topic/baccarat/room-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6636,10 +6214,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6686,10 +6260,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/game-open",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6756,10 +6326,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/flop-card",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6801,10 +6367,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/game-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6852,10 +6414,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/member-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6890,10 +6448,6 @@
         "url": "/self/topic/gameResult",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6932,10 +6486,6 @@
         "url": "/self/topic/roomKicked",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6962,10 +6512,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/card-reset",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -6996,10 +6542,6 @@
         "url": "/topic/baccarat/rooms/{roomID}/game-invalidated",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7030,10 +6572,6 @@
         "url": "/topic/cattle/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7079,10 +6617,6 @@
         "url": "/topic/cattle/rooms/{roomID}/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7128,10 +6662,6 @@
         "url": "/topic/cattle/rooms/{roomID}/game-result",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7178,10 +6708,6 @@
         "url": "/topic/cattle/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7228,10 +6754,6 @@
         "url": "/topic/cattle/room-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7331,10 +6853,6 @@
         "url": "/topic/cattle/rooms/{roomID}/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7381,10 +6899,6 @@
         "url": "/topic/cattle/rooms/{roomID}/game-open",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7451,10 +6965,6 @@
         "url": "/topic/cattle/rooms/{roomID}/flop-card",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7496,10 +7006,6 @@
         "url": "/topic/cattle/rooms/{roomID}/game-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7547,10 +7053,6 @@
         "url": "/topic/cattle/rooms/{roomID}/member-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7585,10 +7087,6 @@
         "url": "/self/topic/gameResult",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7627,10 +7125,6 @@
         "url": "/self/topic/roomKicked",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7657,10 +7151,6 @@
         "url": "/topic/cattle/rooms/{roomID}/card-reset",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7691,10 +7181,6 @@
         "url": "/topic/cattle/rooms/{roomID}/game-invalidated",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7725,10 +7211,6 @@
         "url": "/topic/illustrating/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7766,10 +7248,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/game-result-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7807,10 +7285,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/game-result",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7848,10 +7322,6 @@
         "url": "/topic/illustrating/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7898,10 +7368,6 @@
         "url": "/topic/illustrating/room-info",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -7993,10 +7459,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/room-state",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8043,10 +7505,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/game-open",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8113,10 +7571,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/flop-card",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8158,10 +7612,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/game-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8209,10 +7659,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/member-bet",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8247,10 +7693,6 @@
         "url": "/self/topic/gameResult",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8289,10 +7731,6 @@
         "url": "/self/topic/roomKicked",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8319,10 +7757,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/card-reset",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8353,10 +7787,6 @@
         "url": "/topic/illustrating/rooms/{roomID}/game-invalidated",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8387,10 +7817,6 @@
         "url": "/topic/system-notice",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8441,10 +7867,6 @@
         "url": "/self/topic/playerAmount",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8483,10 +7905,6 @@
         "url": "/self/topic/roomKicked",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8513,10 +7931,6 @@
         "url": "/self/topic/noBetWarning",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",
@@ -8547,10 +7961,6 @@
         "url": "/self/topic/beBand",
         "name": "每局结果(选项卡内)",
         "properties": [{
-          "id": -1,
-          "type": "Object",
-          "scope": "response"
-        }, {
           "name": "code",
           "type": "Integer",
           "scope": "response",

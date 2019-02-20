@@ -300,7 +300,15 @@ export default class MigrateService {
     let newPage = page;
     let djson = dJson;
     if (newPage.request && newPage.request.length > 0) {
-      newPage.request.map((i: any) => properties.push({ "scope": "request", ...i }));
+      newPage.request.map((i: any) => {
+        let description;
+        if (MigrateService.DTOreg.test(i.type)) {
+          description = `${i.description} ${i.type}`
+        } else {
+          description = i.description
+        }
+        properties.push({ "scope": "request", ...i, description })
+      });
     }
     if (newPage.response && newPage.response.dataType && djson[newPage.response.dataType] && djson[newPage.response.dataType].length > 0) {
       djson[newPage.response.dataType].map((i: any) => {
