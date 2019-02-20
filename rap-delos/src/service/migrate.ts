@@ -106,7 +106,7 @@ export default class MigrateService {
       url: projectData.url
     })
     await Dto.update({
-      json: dJson,
+      json: dJson.dataValues.json,
       creatorId: curUserId,
       repositoryId: repo.id
     }, { where: { id: dJson.dataValues.id } });
@@ -306,11 +306,11 @@ export default class MigrateService {
       djson[newPage.response.dataType].map((i: any) => {
         return i.name !== 'data' && properties.push({ "scope": "response", ...i })
       })
-      if (!(djson[newPage.response.dataType][0].id)) {
-        djson[newPage.response.dataType].unshift({
-          id: -1, type: TYPES.OBJECT
-        })
-      }
+      // if (!(djson[newPage.response.dataType][0].id)) {
+      //   djson[newPage.response.dataType].unshift({
+      //     id: -1, type: TYPES.OBJECT
+      //   })
+      // }
       if (!newPage.response.data.description) {
         if (MigrateService.DTOreg.test(newPage.response.data.itemType)) {
           description = newPage.response.data.itemType;

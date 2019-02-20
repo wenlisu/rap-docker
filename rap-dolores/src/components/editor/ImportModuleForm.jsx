@@ -50,6 +50,7 @@ class ImportRepositoryForm extends Component {
   render () {
     const { rmodal } = this.context
     const { disableSubmit } = this.state
+    console.log('disableSubmit', disableSubmit);
     return (
       <section className='ImportRepositoryForm'>
         <div className='rmodal-header'>
@@ -111,13 +112,13 @@ class ImportRepositoryForm extends Component {
       }
       this.props.importRepository({ tsjson: JSON.parse(resultData['ts.json'] || null), dtoJson: JSON.parse(resultData['dto.json'] || null), enumJson: JSON.parse(resultData['enum.json'] || null), orgId }, (res) => {
         if (res.isOk) {
+          this.setState({
+            disableSubmit: false
+          })
           this.context.rmodal.resolve()
         } else {
           console.log(res.message)
         }
-      })
-      this.setState({
-        disableSubmit: false
       })
     } else {
       message.error('请先选择JSON文档');

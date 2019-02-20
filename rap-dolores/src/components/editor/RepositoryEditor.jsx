@@ -175,7 +175,7 @@ class RepositoryEditor extends Component {
     const { onExportRepoDtoJson, location } = this.props;
     onExportRepoDtoJson({ id: location.params.id }, (res) => {
       if(res.isOk) {
-        const value = res.repository.result.json.json;
+        const value = res.repository.result.json;
         this.onReadDto(value)
       }
     });

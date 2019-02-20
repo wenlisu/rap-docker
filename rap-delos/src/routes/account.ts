@@ -68,12 +68,12 @@ router.get('/account/info', async (ctx) => {
 })
 
 router.post('/account/login', async (ctx) => {
-  let { email, password, captcha } = ctx.request.body
+  let { email, password } = ctx.request.body
   let result, errMsg
-  if (process.env.TEST_MODE !== 'true' &&
-    (!captcha || !ctx.session.captcha || captcha.trim().toLowerCase() !== ctx.session.captcha.toLowerCase())) {
-    errMsg = '错误的验证码'
-  } else {
+  // if (process.env.TEST_MODE !== 'true' &&
+  //   (!captcha || !ctx.session.captcha || captcha.trim().toLowerCase() !== ctx.session.captcha.toLowerCase())) {
+  //   errMsg = '错误的验证码'
+  // } else {
     result = await User.findOne({
       attributes: QueryInclude.User.attributes,
       where: { email, password: md5(md5(password)) },
@@ -87,7 +87,7 @@ router.post('/account/login', async (ctx) => {
     } else {
       errMsg = '账号或密码错误'
     }
-  }
+  // }
   ctx.body = {
     data: result ? result : { errMsg },
   }
