@@ -3,6 +3,7 @@ import { TYPES, SCOPES } from "../models/bo/property";
 import * as md5 from 'md5'
 import * as querystring from 'querystring'
 import * as rp from 'request-promise'
+import { trimEnd } from './util';
 const isMd5 = require('is-md5')
 
 export default class MigrateService {
@@ -103,7 +104,7 @@ export default class MigrateService {
       ownerId: curUserId,
       creatorId: curUserId,
       organizationId: orgId,
-      url: projectData.url
+      url: trimEnd(projectData.url, '/')
     })
     await Dto.update({
       json: dJson.dataValues.json,

@@ -5,7 +5,7 @@ import PropertyForm from './PropertyForm'
 import Importer from './Importer'
 import Previewer from './InterfacePreviewer'
 import PropertyGenerate from './PropertyGenerate'
-import { GoMention, GoFileCode, GoEye, GoPlus, GoTrashcan, GoQuestion, GoCode } from 'react-icons/lib/go'
+import { GoMention, GoFileCode, GoEye, GoPlus, GoTrashcan, GoQuestion, GoCode, GoChevronDown, GoChevronUp} from 'react-icons/lib/go'
 import { rptFromStr2Num } from './InterfaceSummary'
 import './PropertyList.css'
 
@@ -60,15 +60,38 @@ const PropertyLabel = (props) => {
 }
 
 class SortableTreeTableRow extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      indexBox: [],
+    }
+  }
+ 
+  handleClickRow = (id) => {
+    const index = this.state.indexBox.indexOf(id);
+    if (index < 0) {
+      this.setState({
+        indexBox: [...this.state.indexBox, id],
+      });
+    } else {
+      this.state.indexBox.splice(index, 1);
+      this.setState({
+        indexBox: this.state.indexBox.splice(index, 1),
+      });
+    }
+  }
+
   render () {
     let { property, editable } = this.props
     let { handleClickCreateChildPropertyButton, handleDeleteMemoryProperty, handleChangePropertyField, handleSortProperties } = this.props
+    const { indexBox } = this.state;
+    console.log(indexBox, indexBox.indexOf(37055) > 0 );
     return (
       <RSortable group={property.depth} handle='.SortableTreeTableRow' disabled={!editable} onChange={handleSortProperties}>
         <div className={`RSortableWrapper depth${property.depth}`}>
           {property.children.sort((a, b) => a.priority - b.priority).map(item =>
             <div key={item.id} className='SortableTreeTableRow' data-id={item.id}>
-              <div className='flex-row'>
+              <div className='flex-row'  onClick={() => this.handleClickRow(item.id)}>
                 {editable &&
                   <div className='td operations nowrap'>
                     {(item.type === 'Object' || item.type === 'Array')
@@ -79,7 +102,10 @@ class SortableTreeTableRow extends Component {
                 }
                 <div className={`td payload name depth-${item.depth} nowrap`}>
                   {!editable
-                    ? <span className='nowrap'>{item.name}{item.scope === 'request' && item.depth === 0 ? <PropertyLabel pos={item.pos} /> : null}</span>
+                    ? <div className='row-name'>
+                        <span className='nowrap'>{item.name}{item.scope === 'request' && item.depth === 0 ? <PropertyLabel pos={item.pos} /> : null}</span>
+                        {item.children && item.children.length ? indexBox.indexOf(item.id) > -1 ? <GoChevronUp className='fontsize-14'/> : <GoChevronDown className='fontsize-14'/> : null}
+                      </div>
                     : <input value={item.name} onChange={e => handleChangePropertyField(item.id, 'name', e.target.value)} className='form-control editable' spellCheck='false' placeholder='' />
                   }
                 </div>
@@ -119,7 +145,7 @@ class SortableTreeTableRow extends Component {
                   }
                 </div>
               </div>
-              {item.children && item.children.length ? <SortableTreeTableRow {...this.props} property={item} /> : null}
+              {item.children && item.children.length && indexBox.indexOf(item.id) > -1 ? <SortableTreeTableRow {...this.props} property={item} /> : null}
             </div>
           )}
         </div>
