@@ -49,3 +49,14 @@
   top: 50%;
   margin-top: -7px;
   right: .75rem; }
+
+.emptyTableRow {
+  padding: .5rem .75rem;
+  height: auto;
+  line-height: 1.5;
+  border: 1px solid #eceeef;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: -1px; }

@@ -148,6 +148,7 @@ class SortableTreeTableRow extends Component {
               {item.children && item.children.length && indexBox.indexOf(item.id) > -1 ? <SortableTreeTableRow {...this.props} property={item} /> : null}
             </div>
           )}
+          {property.children && property.children.length > 0 ? null : <div className='emptyTableRow'>无数据</div>}
         </div>
       </RSortable>
     )
