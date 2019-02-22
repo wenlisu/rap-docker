@@ -235,8 +235,8 @@ export default class MigrateService {
   public static async onReadTopic(cJson: any): Promise<any> {
     let json = cJson;
     for (const mod of json.modules) {
-      for (const type of mod.types) {
-        for (const itf of type.interfaces) {
+      // for (const type of mod.types) { // 后段生成json格式
+        for (const itf of mod.interfaces) {
           let properties = [];
           properties.push({
             "scope": "response",
@@ -245,7 +245,7 @@ export default class MigrateService {
           });
           itf.properties = properties;
         }
-      }
+      // }
     }
     return json;
   }
@@ -273,7 +273,7 @@ export default class MigrateService {
           action.itemType = a.type
           action.type = TYPES.OBJECT
         } else if (a.type === "Integer") {
-          action.description = await this.onReadDes(eJson, a.description)
+          action.description = await this.onReadDes(eJson, a.enumClass, a.description)
         }
         break;
       default:
@@ -288,8 +288,8 @@ export default class MigrateService {
     return action;
   }
 
-  public static async onReadDes(eJson: any, type: any): Promise<any> {
-    let description: any;
+  public static async onReadDes(eJson: any, type: any, d: any): Promise<any> {
+    let description: any = d;
     let etype = eJson[type] || [];
     etype.map((item: any) => {
       description = description ? description + ` ${item.id}:${item.description}` : `${item.id}:${item.description}`;
@@ -393,7 +393,7 @@ export default class MigrateService {
                     });
                   } else {
                     if (!eJson) return false;
-                    description = await MigrateService.onReadDes(eJson, parameterData.enumClass);
+                    description = await MigrateService.onReadDes(eJson, parameterData.enumClass, parameterData.description);
                     type = parameterData.type;
                     parameterList.push({
                       scope: scope,
@@ -501,7 +501,7 @@ export default class MigrateService {
             })
           } else {
             if (!eJson) return false;
-            description = await MigrateService.onReadDes(eJson, array.enumClass);
+            description = await MigrateService.onReadDes(eJson, array.enumClass, array.description);
             arrays.push({
               name: array.name,
               type: nType.type,

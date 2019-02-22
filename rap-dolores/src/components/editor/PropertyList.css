@@ -47,8 +47,8 @@
   .row-name label {
     margin: 0.25em 5px; }
 
-.td {
-  max-height: 32px; }
+.td span {
+  word-wrap: break-word; }
 
 .emptyTableRow {
   padding: .5rem .75rem;
