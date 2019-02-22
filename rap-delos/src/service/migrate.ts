@@ -235,14 +235,16 @@ export default class MigrateService {
   public static async onReadTopic(cJson: any): Promise<any> {
     let json = cJson;
     for (const mod of json.modules) {
-      for (const itf of mod.interfaces) {
-        let properties = [];
-        properties.push({
-          "scope": "response",
-          "type": itf.properties,
-          "description": itf.name
-        });
-        itf.properties = properties;
+      for (const type of mod.types) {
+        for (const itf of type.interfaces) {
+          let properties = [];
+          properties.push({
+            "scope": "response",
+            "type": itf.properties,
+            "description": itf.name
+          });
+          itf.properties = properties;
+        }
       }
     }
     return json;

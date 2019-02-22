@@ -18,7 +18,7 @@ describe('Property', () => {
   before(done => {
     mod = repository.modules[0]
     type = repository.types[0]
-    itf = mod.interfaces[0]
+    itf = type.interfaces[0]
     property = {
       scope: Random.pick(['request', 'response']),
       name: Random.word(6),

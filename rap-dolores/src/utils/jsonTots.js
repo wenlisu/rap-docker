@@ -60,7 +60,6 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
         }
     }
     var result = this.formatCharsToTypeScript(jsonContent, objectName, optionalKeys);
-    console.log(this.indexBox, objectName, this.indexBox.indexOf(objectName) > -1)
     if(this.indexBox.indexOf(objectName) > -1) {
         return;
     } else {

@@ -16,6 +16,7 @@ class Checker extends Component {
     super(props)
     this.state = {
       mod: null,
+      type: null,
       itf: null,
       target: serve
     }
@@ -26,7 +27,8 @@ class Checker extends Component {
 
     repository = repository.data
     let mod = this.state.mod || repository.modules[0]
-    let itf = this.state.itf || mod.interfaces[0]
+    let type = this.state.type || mod.types[0]
+    let itf = this.state.itf || type.interfaces[0]
     return (
       <section className='Checker'>
         <div className='card-mods clearfix'>
@@ -36,8 +38,14 @@ class Checker extends Component {
           )}
         </div>
         <div className='card-itfs clearfix'>
+          <span className='card-title'>类型：</span>
+          {mod.types.map(item =>
+            <Link key={item.id} to='' onClick={e => this.switchItf(e, item)} className={item.id === itf.id ? 'active' : ''}>{item.name}</Link>
+          )}
+        </div>
+        <div className='card-itfs clearfix'>
           <span className='card-title'>接口：</span>
-          {mod.interfaces.map(item =>
+          {type.interfaces.map(item =>
             <Link key={item.id} to='' onClick={e => this.switchItf(e, item)} className={item.id === itf.id ? 'active' : ''}>{item.name}</Link>
           )}
         </div>
@@ -56,7 +64,8 @@ class Checker extends Component {
     repository = repository.data
     if (!repository.id) return
     let mod = this.state.mod || repository.modules[0]
-    let itf = this.state.itf || mod.interfaces[0]
+    let type = this.state.type || mod.types[0]
+    let itf = this.state.itf || type.interfaces[0]
     fetch(`${serve}/app/mock/data/${itf.id}`)
       .then(res => res.json())
       .then(json => {

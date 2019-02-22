@@ -32,8 +32,10 @@ class Tester extends Component {
 
     let mod = repository && repository.modules && repository.modules.length
       ? (repository.modules.find(item => item.id === +params.mod) || repository.modules[0]) : {}
-    let itf = mod.interfaces && mod.interfaces.length
-      ? (mod.interfaces.find(item => item.id === +params.itf) || mod.interfaces[0]) : {}
+    let type = mod.types && mod.types.length
+      ? (mod.types.find(item => item.id === +params.type) || mod.types[0]) : {}
+    let itf = type.interfaces && type.interfaces.length
+      ? (type.interfaces.find(item => item.id === +params.itf) || type.interfaces[0]) : {}
     // let properties = itf.properties || []
 
     let { requestData } = this.state
@@ -57,11 +59,21 @@ class Tester extends Component {
             </ul>
           </div>
           <div className='card-itfs clearfix'>
+            <div className='card-title'>类型：</div>
+            <ul className='clearfix'>
+              {mod.types.map(item =>
+                <li key={item.id} className={item.id === type.id ? 'active' : ''}>
+                  <Link to={uri.setSearch('mod', mod.id).setSearch('type', item.id).href()} onClick={e => this.switchItf(item)}>{item.name}</Link>
+                </li>
+              )}
+            </ul>
+          </div>
+          <div className='card-itfs clearfix'>
             <div className='card-title'>接口：</div>
             <ul className='clearfix'>
-              {mod.interfaces.map(item =>
+              {type.interfaces.map(item =>
                 <li key={item.id} className={item.id === itf.id ? 'active' : ''}>
-                  <Link to={uri.setSearch('mod', mod.id).setSearch('itf', item.id).href()} onClick={e => this.switchItf(item)}>{item.name}</Link>
+                  <Link to={uri.setSearch('mod', mod.id).setSearch('type', type.id).setSearch('itf', item.id).href()} onClick={e => this.switchItf(item)}>{item.name}</Link>
                 </li>
               )}
             </ul>
@@ -100,7 +112,8 @@ class Tester extends Component {
     // repository = repository.data
     // if (!repository.id) return
     // let mod = this.state.mod || repository.modules[0]
-    // let itf = this.state.itf || mod.interfaces[0]
+    // let type = this.state.itf || mod.types[0]
+    // let itf = this.state.itf || type.interfaces[0]
     // this.switchMod(undefined, mod)
     // this.switchItf(undefined, itf)
   }
