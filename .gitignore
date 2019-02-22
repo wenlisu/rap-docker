@@ -1,7 +1,6 @@
-node_modules
-/rap-delos/dist
-/rap-delos/node_modules
-/rap-dolores/build
-/rap-dolores/node_modules
+*node_modules
+*/dist
+*/package-lock.json
 .DS_Store
+dump.rdb
 .vscode
