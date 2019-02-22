@@ -23,40 +23,58 @@ class DropdownMenu extends Component {
     let nextRespository = { ...respository, modules: [] }
     let counter = 0
     respository.modules.forEach(mod => {
-      let nextModule = { ...mod, interfaces: [] }
+      let nextModule = { ...mod, types: [] }
       let matchModule = nextModule.name.indexOf(seed) !== -1
       if (matchModule) {
         counter++
         nextRespository.modules.push(nextModule)
       }
-
-      mod.interfaces.forEach(itf => {
-        let nextInterface = { ...itf, properties: [] }
-        let matchInterface = nextInterface.name.indexOf(seed) !== -1 || nextInterface.url.indexOf(seed) !== -1 || nextInterface.method === seed
-        if (matchInterface) {
+      mod.types.forEach(type => {
+        let nextType = { ...type, interfaces: []}
+        let matchType = nextType.name.indexOf(seed) !== -1
+        if (matchType) {
           counter++
           if (!matchModule) {
             matchModule = true
             nextRespository.modules.push(nextModule)
           }
-          nextModule.interfaces.push(nextInterface)
+          nextModule.types.push(nextType)
         }
-
-        itf.properties.forEach(property => {
-          let nextProperty = { ...property }
-          let matchProperty = nextProperty.name.indexOf(seed) !== -1
-          if (matchProperty) {
+        type.interfaces.forEach(itf => {
+          let nextInterface = { ...itf, properties: [] }
+          let matchInterface = nextInterface.name.indexOf(seed) !== -1 || nextInterface.url.indexOf(seed) !== -1 || nextInterface.method === seed
+          if (matchInterface) {
             counter++
             if (!matchModule) {
               matchModule = true
               nextRespository.modules.push(nextModule)
             }
-            if (!matchInterface) {
-              matchInterface = true
-              nextModule.interfaces.push(nextInterface)
+            if (!matchType) {
+              matchType = true
+              nextModule.types.push(nextType)
             }
-            nextInterface.properties.push(nextProperty)
+            nextType.interfaces.push(nextInterface)
           }
+          itf.properties.forEach(property => {
+            let nextProperty = { ...property }
+            let matchProperty = nextProperty.name.indexOf(seed) !== -1
+            if (matchProperty) {
+              counter++
+              if (!matchModule) {
+                matchModule = true
+                nextRespository.modules.push(nextModule)
+              }
+              if (!matchType) {
+                matchType = true
+                nextModule.types.push(nextType)
+              }
+              if (!matchInterface) {
+                matchInterface = true
+                nextType.interfaces.push(nextInterface)
+              }
+              nextInterface.properties.push(nextProperty)
+            }
+          })
         })
       })
     })
@@ -85,19 +103,27 @@ class DropdownMenu extends Component {
               <span className='label'>模块</span>
               <Highlight className='dropdown-item-clip' clip={mod.name} seed={seed} />
             </Link>
-            {mod.interfaces.map(itf =>
-              <div key={`itf-${itf.id}`} >
-                <Link to={URI(uri).setSearch({ mod: itf.moduleId }).setSearch({ itf: itf.id }).href()} onClick={onSelect} className='dropdown-item dropdown-item-interface'>
-                  <span className='label'>接口</span>
-                  <Highlight className='dropdown-item-clip' clip={itf.name} seed={seed} />
-                  <Highlight className='dropdown-item-clip' clip={itf.method} seed={seed} />
-                  <Highlight className='dropdown-item-clip' clip={itf.url} seed={seed} />
+            {mod.types.map(type => 
+              <div key={`type-${type.id}`} >
+                <Link to={URI(uri).setSearch({ mod: type.moduleId }).setSearch({ type: type.id }).href()} onClick={onSelect} className='dropdown-item dropdown-item-interface'>
+                  <span className='label'>类型</span>
+                  <Highlight className='dropdown-item-clip' clip={type.name} seed={seed} />
                 </Link>
-                {itf.properties.map(property =>
-                  <Link key={`property-${property.id}`} to={URI(uri).setSearch({ mod: property.moduleId }).setSearch({ itf: property.interfaceId }).href()} onClick={onSelect} className='dropdown-item dropdown-item-property'>
-                    <span className='label'>属性</span>
-                    <Highlight className='dropdown-item-clip' clip={property.name} seed={seed} />
-                  </Link>
+                {type.interfaces.map(itf =>
+                  <div key={`itf-${itf.id}`} >
+                    <Link to={URI(uri).setSearch({ mod: itf.moduleId }).setSearch({ type: itf.typeId }).setSearch({ itf: itf.id }).href()} onClick={onSelect} className='dropdown-item dropdown-item-interface'>
+                      <span className='label'>接口</span>
+                      <Highlight className='dropdown-item-clip' clip={itf.name} seed={seed} />
+                      <Highlight className='dropdown-item-clip' clip={itf.method} seed={seed} />
+                      <Highlight className='dropdown-item-clip' clip={itf.url} seed={seed} />
+                    </Link>
+                    {itf.properties.map(property =>
+                      <Link key={`property-${property.id}`} to={URI(uri).setSearch({ mod: property.moduleId }).setSearch({ type: property.typeId }).setSearch({ itf: property.interfaceId }).href()} onClick={onSelect} className='dropdown-item dropdown-item-property'>
+                        <span className='label'>属性</span>
+                        <Highlight className='dropdown-item-clip' clip={property.name} seed={seed} />
+                      </Link>
+                    )}
+                  </div>
                 )}
               </div>
             )}

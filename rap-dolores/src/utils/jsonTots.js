@@ -3,6 +3,7 @@ function Json2Ts() {
 };
 Json2Ts.indexBox = [];
 Json2Ts.convert = function (content, scope) {
+    this.indexBox = [];
     this.scope = scope;
     var jsonContent = content;
     if (_.isArray(jsonContent)) {
@@ -59,6 +60,7 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
         }
     }
     var result = this.formatCharsToTypeScript(jsonContent, objectName, optionalKeys);
+    console.log(this.indexBox, objectName, this.indexBox.indexOf(objectName) > -1)
     if(this.indexBox.indexOf(objectName) > -1) {
         return;
     } else {
