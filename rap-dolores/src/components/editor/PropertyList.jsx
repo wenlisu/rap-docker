@@ -85,7 +85,6 @@ class SortableTreeTableRow extends Component {
     let { property, editable } = this.props
     let { handleClickCreateChildPropertyButton, handleDeleteMemoryProperty, handleChangePropertyField, handleSortProperties } = this.props
     const { indexBox } = this.state;
-    console.log(indexBox, indexBox.indexOf(37055) > 0 );
     return (
       <RSortable group={property.depth} handle='.SortableTreeTableRow' disabled={!editable} onChange={handleSortProperties}>
         <div className={`RSortableWrapper depth${property.depth}`}>

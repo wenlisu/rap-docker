@@ -1,6 +1,7 @@
 var _ = require("underscore");
 function Json2Ts() {
 };
+Json2Ts.indexBox = [];
 Json2Ts.convert = function (content, scope) {
     this.scope = scope;
     var jsonContent = content;
@@ -44,9 +45,6 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
             } else {
                 jsonContent[key] = arrayTypes[0];
             }
-            if(key === 'bankCards?') {
-                console.log('value', value, this.detectMultiArrayTypes([1, 2]));
-            }
         } else if (_.isDate(value)) {
             jsonContent[key] = "Date;";
         } else if (_.isString(value)) {
@@ -60,9 +58,14 @@ Json2Ts.convertObjectToTsInterfaces = function (jsonContent, objectName) {
             optionalKeys.push(key);
         }
     }
-    var result = this.formatCharsToTypeScript(jsonContent, objectName, optionalKeys);
-    objectResult.push(result);
-    return objectResult.join("\n\n");
+    if(this.indexBox.indexOf(objectName) > -1) {
+        return;
+    } else {
+        var result = this.formatCharsToTypeScript(jsonContent, objectName, optionalKeys);
+        this.indexBox = [...this.indexBox, objectName];
+        objectResult.push(result);
+        return objectResult.join("\n\n");
+    }
 };
 Json2Ts.detectMultiArrayTypes = function (value, valueType) {
     if (valueType === void 0) {

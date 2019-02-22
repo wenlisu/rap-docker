@@ -26,7 +26,6 @@ class PropertyGenerate extends Component {
   componentDidMount() {
     console.log(this.props.data);
     let params = Tree.arrayToTree(this.props.data);
-    console.log(params);
     this.setState({
       html: `${Tree.JsonToTs(params, this.props.scope)}`,
     });
