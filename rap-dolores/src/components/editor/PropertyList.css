@@ -18,32 +18,43 @@
 
 .depth6 {
   background-color: #757575; }
-  .depth6 input, .depth6 span, .depth6 textarea, .depth6 select {
-    color: #ffffff; }
+
+.depth6 input, .depth6 span, .depth6 textarea, .depth6 select {
+  color: #ffffff; }
 
 .depth7 {
   background-color: #616161; }
-  .depth7 input, .depth7 span, .depth7 textarea, .depth7 select {
-    color: #ffffff; }
+
+.depth7 input, .depth7 span, .depth7 textarea, .depth7 select {
+  color: #ffffff; }
 
 .depth8 {
   background-color: #424242; }
-  .depth8 input, .depth8 span, .depth8 textarea, .depth8 select {
-    color: #ffffff; }
+
+.depth8 input, .depth8 span, .depth8 textarea, .depth8 select {
+  color: #ffffff; }
 
 .depth9 {
   background-color: #212121; }
-  .depth9 input, .depth9 span, .depth9 textarea, .depth9 select {
-    color: #ffffff; }
+
+.depth9 input, .depth9 span, .depth9 textarea, .depth9 select {
+  color: #ffffff; }
 
 .row-name {
   width: 100%;
   position: relative; }
-  .row-name svg {
-    position: absolute;
-    top: 50%;
-    margin-top: -7px;
-    right: .75rem; }
+
+.row-name svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  right: .75rem; }
+
+.row-name label {
+  margin: 0.25em 5px; }
+
+.td {
+  max-height: 32px; }
 
 .emptyTableRow {
   padding: .5rem .75rem;

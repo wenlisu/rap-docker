@@ -58,6 +58,6 @@ module.exports = {
 * ~~根据后端生成数据，调整结构~~
 * ~~生成一整份DT文件的interfaces~~
 * 完善需求：
-  * DTO的interfaces去重
+  * ~~DTO的interfaces去重~~
   * ~~响应内容区增加折叠功能~~
   * ~~请求地址过滤~~
