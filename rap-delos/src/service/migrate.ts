@@ -506,7 +506,7 @@ export default class MigrateService {
               name: array.name,
               type: nType.type,
               value: nType.valueExp,
-              description: `${array.description} ${description}`,
+              description,
             })
           }
         }
