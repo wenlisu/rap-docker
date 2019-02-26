@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { RParsley } from '../utils'
 import config from '../../config'
-
 class ExportPostmanForm extends Component {
   static contextTypes = {
     rmodal: PropTypes.object.isRequired

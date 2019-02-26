@@ -81,6 +81,7 @@ export default class MigrateService {
               moduleId: mod.id,
               repositoryId: repo.id,
               parentId: parentId || -1,
+              // required: p.required,
             })
             for (const subParam of p.parameterList) {
               processParam(subParam, scope, pCreated.id)
@@ -369,6 +370,7 @@ export default class MigrateService {
                       name: parameterData.name,
                       type,
                       description,
+                      required: parameterData.required || false,
                     });
                   } else if (typeDTO) {
                     let dtype = djson[parameterData.itemType];
@@ -390,6 +392,7 @@ export default class MigrateService {
                       type,
                       description,
                       parameterList: pparameterList,
+                      required: parameterData.required || false,
                     });
                   } else {
                     if (!eJson) return false;
@@ -400,6 +403,7 @@ export default class MigrateService {
                       name: parameterData.name,
                       type,
                       description,
+                      required: parameterData.required || false,
                     });
                   }
                 }
@@ -498,6 +502,7 @@ export default class MigrateService {
               type: nType.type,
               value: nType.valueExp,
               description: array.description,
+              required: array.required || false,
             })
           } else {
             if (!eJson) return false;
@@ -507,6 +512,7 @@ export default class MigrateService {
               type: nType.type,
               value: nType.valueExp,
               description,
+              required: array.required || false,
             })
           }
         }
